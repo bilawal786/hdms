@@ -62,6 +62,9 @@
             color: #fafafa !important;
             background-color: transparent;
         }
+        .cta-1, .cta-2 {
+            background-color: #fafafa !important;
+        }
     </style>
     <!-- Fonts
     ============================================= -->
@@ -270,7 +273,7 @@
                     <!-- Service Block #1 -->
                     <div class="col-xs-12 col-sm-4 col-md-4 service-block">
                         <div class="service-img">
-                            <img src="{{asset('front/assets/images/services/grid/1.jpg')}}" alt="icons"/>
+                            <img height="250px" src="{{asset('front/assets/images/01.jpeg')}}" alt="icons"/>
                         </div>
                         <div class="service-icon">
                             <img src="{{asset('front/assets/images/services/icons/i48/1w.png')}}" alt="icon"/>
@@ -291,7 +294,7 @@
                     <!-- Service Block #2 -->
                     <div class="col-xs-12 col-sm-4 col-md-4 service-block">
                         <div class="service-img">
-                            <img src="{{asset('front/assets/images/services/grid/2.jpg')}}" alt="icons"/>
+                            <img height="250px" src="{{asset('front/assets/images/02.jpeg')}}" alt="icons"/>
                         </div>
                         <div class="service-icon">
                             <img src="{{asset('front/assets/images/services/icons/i48/2w.png')}}" alt="icon"/>
@@ -312,7 +315,7 @@
                     <!-- Service Block #3 -->
                     <div class="col-xs-12 col-sm-4 col-md-4 service-block">
                         <div class="service-img">
-                            <img src="{{asset('front/assets/images/services/grid/3.jpg')}}" alt="icons"/>
+                            <img height="250px" src="{{asset('front/assets/images/03.jpeg')}}" alt="icons"/>
                         </div>
                         <div class="service-icon">
                             <img src="{{asset('front/assets/images/services/icons/i48/3w.png')}}" alt="icon"/>
@@ -712,116 +715,10 @@
 </section>
 <!-- #cta-3 end -->
 
-<!-- Shortcode #9
-============================================= -->
-<section id="clients" class="shortcode-9">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="heading heading-2 text-center">
-                    <div class="heading-bg">
-                        <p class="mb-0">Ils nous font toujours confiance</p>
-                        <h2>Nos clients</h2>
-                    </div>
-                </div>
-                <!-- .heading end -->
-            </div>
-            <!-- .col-md-12 end -->
-        </div>
-        <!-- .row end -->
-        <div class="row">
-            <!-- Client Item -->
-            <div class="col-xs-12 col-sm-4 col-md-2">
-                <div class="brand">
-                    <img class="img-responsive center-block" src="{{asset('front/assets/images/clients/1.png')}}" alt="brand">
-                </div>
-            </div>
-            <!-- .col-md-2 end -->
 
-            <!-- Client Item -->
-            <div class="col-xs-12 col-sm-4 col-md-2">
-                <div class="brand">
-                    <img class="img-responsive center-block" src="{{asset('front/assets/images/clients/2.png')}}" alt="brand">
-                </div>
-            </div>
-            <!-- .col-md-2 end -->
-
-            <!-- Client Item -->
-            <div class="col-xs-12 col-sm-4 col-md-2">
-                <div class="brand">
-                    <img class="img-responsive center-block" src="{{asset('front/assets/images/clients/3.png')}}" alt="brand">
-                </div>
-            </div>
-            <!-- .col-md-2 end -->
-
-            <!-- Client Item -->
-            <div class="col-xs-12 col-sm-4 col-md-2">
-                <div class="brand">
-                    <img class="img-responsive center-block" src="{{asset('front/assets/images/clients/4.png')}}" alt="brand">
-                </div>
-            </div>
-            <!-- .col-md-2 end -->
-
-            <!-- Client Item -->
-            <div class="col-xs-12 col-sm-4 col-md-2">
-                <div class="brand">
-                    <img class="img-responsive center-block" src="{{asset('front/assets/images/clients/5.png')}}" alt="brand">
-                </div>
-            </div>
-            <!-- .col-md-2 end -->
-
-            <!-- Client Item -->
-            <div class="col-xs-12 col-sm-4 col-md-2">
-                <div class="brand last">
-                    <img class="img-responsive center-block" src="{{asset('front/assets/images/clients/6.png')}}" alt="brand">
-                </div>
-            </div>
-            <!-- .col-md-2 end -->
-        </div>
-        <!-- .row End -->
-    </div>
-    <!-- .container end -->
-</section>
-<!-- #clients end-->
 
 <!-- Call To Action #1
 ============================================= -->
-<section id="cta-1" class="cta pb-0">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="cta-1 bg-theme">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-1 hidden-xs">
-                            <div class="cta-img">
-                                <img src="{{asset('front/assets/images/call/cta-1.png')}}" alt="cta">
-                            </div>
-                        </div>
-                        <!-- .col-md-2 end -->
-                        <div class="col-xs-12 col-sm-12 col-md-7 cta-devider text-center-xs">
-                            <div class="cta-desc">
-                                <p>Avez-vous des questions !</p>
-                                <h5>N'hésitez pas à nous contacter à tout moment.</h5>
-                            </div>
-                        </div>
-                        <!-- .col-md-7 end -->
-                        <div class="col-xs-12 col-sm-12 col-md-2 pull-right pull-none-xs">
-                            <div class="cta-action">
-                                <a class="btn btn-secondary" href="contact-1.html">Nous contacter</a>
-                            </div>
-                        </div>
-                        <!-- .col-md-2 end -->
-                    </div>
-                </div>
-                <!-- .cta-1 end -->
-            </div>
-            <!-- .col-md-12 end -->
-        </div>
-        <!-- .row end -->
-    </div>
-    <!-- .container end -->
-</section>
-<!-- #cta-1 end -->
 
 <footer id="footer" class="footer-1">
     <!-- Contact Bar
@@ -889,7 +786,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-3 widget-navigation text-center-xs mb-30-xs">
                     <h5 class="text-capitalize text-white">la navigation</h5>
                     <div class="row">
-                        <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
                             <ul class="list-unstyled text-capitalize">
                                 <li>
                                     <a href="#"> Accueil</a>
@@ -910,7 +807,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-5 widget-services text-center-xs">
                     <h5 class="text-capitalize text-white">Nos services</h5>
                     <div class="row">
-                        <div class="col-xs-4 col-sm-4 col-md-4">
+                        <div class="col-xs-12 col-sm-4 col-md-4">
                             <ul class="list-unstyled text-capitalize">
                                 <li>
                                     <a href="#"> DESIGN PERSONALISÉ</a>
