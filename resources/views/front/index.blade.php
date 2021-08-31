@@ -108,7 +108,7 @@
     <title>HDMS CLIM</title>
 </head>
 <body>
-<div class="preloader">
+<!--<div class="preloader">
     <div class="spinner">
         <div class="bounce1">
         </div>
@@ -117,7 +117,7 @@
         <div class="bounce3">
         </div>
     </div>
-</div>
+</div>-->
 <header id="navbar-spy" class="full-header header-3 style-2">
     <nav id="primary-menu" class="navbar navbar-fixed-top">
         <div class="row">
