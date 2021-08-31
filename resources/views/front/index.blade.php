@@ -65,6 +65,21 @@
         .cta-1, .cta-2 {
             background-color: #fafafa !important;
         }
+        .service-4 .service-desc, .service-5 .service-desc {
+            padding-left: 0px !important;
+        }
+        .h110{
+            height: 110px
+        }
+        .h50{
+            height: 50px;
+        }
+        .service-4 .service-content {
+             margin-bottom: 0px !important;
+        }
+        .testimonial-img i {
+            background-color: #4169e1 !important;
+        }
     </style>
     <!-- Fonts
     ============================================= -->
@@ -167,21 +182,21 @@
                 <!-- slide 1 -->
                 <li data-transition="3dcurtain-vertical" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" style="background-color: rgba(34, 34, 34, 0.3);">
                     <!-- MAIN IMAGE -->
-                    <img src="{{asset('front/assets/images/sliders/12.jpeg')}}"  alt="Background"  width="1920" height="1280">
+                    <img src="{{asset('front/assets/images/08.jpg')}}"  alt="Background"  width="1920" height="1280">
 
                 </li>
 
                 <!-- slide 2 -->
                 <li data-transition="fadefrombottom" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000">
                     <!-- MAIN IMAGE -->
-                    <img src="{{asset('front/assets/images/sliders/12.jpeg')}}"  alt=""  width="1920" height="1280">
+                    <img src="{{asset('front/assets/images/08.jpg')}}"  alt=""  width="1920" height="1280">
 
                 </li>
 
                 <!-- slide 3 -->
                 <li data-index='rs-367' data-transition='scaledownfromtop' data-slotamount='default' data-easein='default' data-easeout='default' data-masterspeed='default'>
                     <!-- MAIN IMAGE -->
-                    <img src="{{asset('front/assets/images/sliders/12.jpeg')}}"  alt=""  width="1920" height="1280">
+                    <img src="{{asset('front/assets/images/08.jpg')}}"  alt=""  width="1920" height="1280">
                     <!-- LAYER NR. 1 -->
                 </li>
             </ul>
@@ -198,7 +213,7 @@
                         </div>
                         <div class="widget-contact-info">
                             <p class="text-capitalize">E-mail</p>
-                            <p class="font-heading text-white">7oroof@7oroof.com</p>
+                            <p class="font-heading text-white">hdmsclim.secretariat@gmail.com</p>
                         </div>
                     </li>
                     <!-- .widget end -->
@@ -208,8 +223,8 @@
                             <i class="lnr lnr-phone"></i>
                         </div>
                         <div class="widget-contact-info">
-                            <p class="text-capitalize">Appelez-nous</p>
-                            <p class="text-capitalize font-heading text-white">002 01065370701</p>
+                            <p class="text-capitalize">Téléphone</p>
+                            <p class="text-capitalize font-heading text-white">0690914868</p>
                         </div>
                     </li>
                     <!-- .widget end -->
@@ -265,7 +280,7 @@
 
 <!-- Service Block #4
 ============================================= -->
-<section class="service service-4">
+<section class="service service-4" style="padding-bottom: 0px">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -273,19 +288,17 @@
                     <!-- Service Block #1 -->
                     <div class="col-xs-12 col-sm-4 col-md-4 service-block">
                         <div class="service-img">
-                            <img height="250px" src="{{asset('front/assets/images/01.jpeg')}}" alt="icons"/>
+                            <img height="250px" src="{{asset('front/assets/images/07.png')}}" alt="icons"/>
                         </div>
-                        <div class="service-icon">
-                            <img src="{{asset('front/assets/images/services/icons/i48/1w.png')}}" alt="icon"/>
-                            <img src="{{asset('front/assets/images/services/icons/i48/1w.png')}}" alt="icon"/>
-                        </div>
+
                         <div class="service-content">
                             <div class="service-desc">
-                                <h4>Design personalisé</h4>
-                                <p>Tiling is an effective way to add elegance & style to any bath or kitchen Yellow Hats Remodeling specializes in tile installation and works directly with each homeowner.</p>
-<!--                                <a class="read-more" href="#"><i class="fa fa-plus"></i>
-                                    <span>read more</span>
-                                </a>-->
+                                <h4 class="h50">INSTALLATION</h4>
+                                <p class="h110">Tiling is an effective way to add elegance & style to any bath or kitchen Yellow Hats Remodeling specializes in tile installation and works directly with each homeowner.</p>
+                                <video width="100%" controls>
+                                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                    Your browser does not support HTML video.
+                                </video>
                             </div>
                         </div>
                     </div>
@@ -294,19 +307,17 @@
                     <!-- Service Block #2 -->
                     <div class="col-xs-12 col-sm-4 col-md-4 service-block">
                         <div class="service-img">
-                            <img height="250px" src="{{asset('front/assets/images/02.jpeg')}}" alt="icons"/>
+                            <img height="250px" src="{{asset('front/assets/images/05.png')}}" alt="icons"/>
                         </div>
-                        <div class="service-icon">
-                            <img src="{{asset('front/assets/images/services/icons/i48/2w.png')}}" alt="icon"/>
-                            <img src="{{asset('front/assets/images/services/icons/i48/2w.png')}}" alt="icon"/>
-                        </div>
+
                         <div class="service-content">
                             <div class="service-desc">
-                                <h4>Installation</h4>
-                                <p>Yellow Hats has full service renovation expertise, we are equipped with the right tools and people to handle projects of all sizes & provide high quality renovation works.</p>
-<!--                                <a class="read-more" href="#"><i class="fa fa-plus"></i>
-                                    <span>read more</span>
-                                </a>-->
+                                <h4 class="h50">ENTRETIEN</h4>
+                                <p class="h110">Yellow Hats has full service renovation expertise, we are equipped with the right tools and people to handle projects of all sizes & provide high quality renovation works.</p>
+                                <video width="100%" controls>
+                                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                    Your browser does not support HTML video.
+                                </video>
                             </div>
                         </div>
                     </div>
@@ -315,19 +326,17 @@
                     <!-- Service Block #3 -->
                     <div class="col-xs-12 col-sm-4 col-md-4 service-block">
                         <div class="service-img">
-                            <img height="250px" src="{{asset('front/assets/images/03.jpeg')}}" alt="icons"/>
+                            <img height="250px" src="{{asset('front/assets/images/06.png')}}" alt="icons"/>
                         </div>
-                        <div class="service-icon">
-                            <img src="{{asset('front/assets/images/services/icons/i48/3w.png')}}" alt="icon"/>
-                            <img src="{{asset('front/assets/images/services/icons/i48/3w.png')}}" alt="icon"/>
-                        </div>
+
                         <div class="service-content">
                             <div class="service-desc">
-                                <h4>Maintenance</h4>
-                                <p>Yellow Hats aim to eliminate the task of dividing your project between different architecture and construction company as we offers design and build services for you.</p>
-<!--                                <a class="read-more" href="#"><i class="fa fa-plus"></i>
-                                    <span>read more</span>
-                                </a>-->
+                                <h4 class="h50">MAINTENANCE / DEPANNAGE / DIAGNOSTICS</h4>
+                                <p class="h110">Yellow Hats aim to eliminate the task of dividing your project between different architecture and construction company as we offers design and build services for you.</p>
+                                <video width="100%" controls>
+                                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                    Your browser does not support HTML video.
+                                </video>
                             </div>
                         </div>
                     </div>
@@ -597,7 +606,7 @@
                 </div>
             </div>
             <!-- .col-md-12 end -->
-            <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="panel-group accordion" id="accordion02" role="tablist" aria-multiselectable="true">
 
                     <!-- Panel 01 -->
@@ -609,8 +618,26 @@
                             </h4>
                         </div>
                         <div id="collapse02-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="panel-body">
-                                Depuis sa fondation, l'entreprise a doublé son chiffre d'affaires d'année en année et ses effectifs ont augmenté en conséquence. Aujourd'hui, HDMS compte plus de 4 000 professionnels sur sa liste de paie. La société est active au Moyen-Orient et en Europe.                            </div>
+                            <div class="panel-body text-justify">
+                               <b> HDMS Clim, est à votre service pour l’achat, la
+                                pose, la maintenance le diagnostic et le dépannage de votre
+                                climatisation.</b>
+                                <br>
+                                <br>
+
+                                Nos équipes sont à votre disposition pour répondre à toutes vos problématiques
+                                concernant la climatisation que vous soyez particuliers ou professionnels. <br>
+                                Disposant de plusieurs équipes spécialisées, nous sommes en mesure d’installer
+                                votre climatisation et en assure le bon fonctionnement à travers nos équipes de
+                                dépannage de climatisation ainsi que de maintenance. <br>
+
+                                Disposant de nombreuses certifications, nous travaillons uniquement avec des
+                                marques de climatisations reconnues permettant un service optimale. <br>
+                                Nos prestations globales pour tous les systèmes de génie climatique nous
+                                permettent de rester à la pointe de notre secteur afin de climatiser au mieux
+
+                                l’ensemble de vos locaux et Habitation.
+                             </div>
                         </div>
                     </div>
 
@@ -618,12 +645,20 @@
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingTwo">
                             <h4 class="panel-title">
-                                <a class="accordion-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion02" href="#collapse02-2" aria-expanded="false" aria-controls="collapse02-2"> Notre mission </a>
+                                <a class="accordion-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion02" href="#collapse02-2" aria-expanded="false" aria-controls="collapse02-2"> NOS VALEURS </a>
                             </h4>
                         </div>
                         <div id="collapse02-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                             <div class="panel-body">
-                                Nous ne faisons que ce sur quoi nous sommes excellents. Si nous nous attaquons à un projet, vous pouvez être sûr à 100% qu'il sera livré à temps. Nous assurons toutes nos responsabilités, y compris la responsabilité civile, indemnisant ainsi nos clients contre tous les risques.                            </div>
+                                <b>
+                                (R)espect d’autrui <br>
+                                (E)sprit d’équipe <br>
+                                (S)atisfaction client <br>
+                                (P)artage du savoir-faire <br>
+                                (E)ngagement <br>
+                                (C)confiance <br>
+                                (T)ravail de qualité.</b>
+                                 </div>
                         </div>
                     </div>
 
@@ -631,19 +666,22 @@
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingThree">
                             <h4 class="panel-title">
-                                <a class="accordion-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion02" href="#collapse02-3" aria-expanded="false" aria-controls="collapse02-3"> Nos buts </a>
+                                <a class="accordion-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion02" href="#collapse02-3" aria-expanded="false" aria-controls="collapse02-3"> NOS ENGAGEMENTS </a>
                             </h4>
                         </div>
                         <div id="collapse02-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                             <div class="panel-body">
-                                HDMS est l'un des principaux développeurs de projets commerciaux, industriels et résidentiels de qualité A aux États-Unis. Depuis sa fondation, l'entreprise a doublé son chiffre d'affaires d'année en année et ses effectifs ont augmenté en conséquence.                            </div>
+                                HDNS Clim s’est attachée à conserver les valeurs qui ont animé sa création.
+                                Une charte d’engagement a été établie pour conduire chaque professionnel à
+                                s’impliquer de manière identique.
+                                </div>
                         </div>
                     </div>
                 </div>
                 <!-- End .Accordion-->
             </div>
             <!-- .col-md-6 end -->
-            <div class="col-xs-12 col-sm-12 col-md-6">
+<!--            <div class="col-xs-12 col-sm-12 col-md-6">
                 <div id="testimonial-oc-5"  class="testimonial-slide testimonial testimonial-3">
                     <div class="testimonial-item">
                         <div class="testimonial-content">
@@ -656,7 +694,7 @@
                             <strong>Begha</strong>, Art Director
                         </div>
                     </div>
-                    <!-- .testimonial-item end -->
+                    &lt;!&ndash; .testimonial-item end &ndash;&gt;
 
                     <div class="testimonial-item">
                         <div class="testimonial-content">
@@ -669,7 +707,7 @@
                             <strong>Habaza</strong>, Civil Engineer
                         </div>
                     </div>
-                    <!-- .testimonial-item end -->
+                    &lt;!&ndash; .testimonial-item end &ndash;&gt;
 
                     <div class="testimonial-item">
                         <div class="testimonial-content">
@@ -682,16 +720,142 @@
                             <strong>Fouad Badawy</strong>, Investor
                         </div>
                     </div>
-                    <!-- .testimonial-item end -->
+                    &lt;!&ndash; .testimonial-item end &ndash;&gt;
                 </div>
-            </div>
+            </div>-->
             <!-- .col-md-6 end -->
         </div>
         <!-- .row end -->
     </div>
     <!-- .container end -->
 </section>
+<!-- Testimonials #1
+============================================= -->
+<section id="testimonials" class="testimonial testimonial-1 bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="heading heading-3 text-center">
+                    <div class="heading-bg">
+                        <p class="mb-0">ce que les gens disent ?</p>
+                        <h2>témoignages</h2>
+                    </div>
+                </div>
+                <!-- .heading end -->
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div id="testimonial-oc" class="testimonial-carousel">
 
+                    <!-- testimonial item #1 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-img">
+                                <i class="fa fa-quote-left"></i>
+                            </div>
+                            <p>The company’s experts have accumulated valuable experience in green development, being savvy to all aspects of the certification process and requirements.</p>
+                        </div>
+                        <div class="testimonial-divider">
+                        </div>
+                        <div class="testimonial-meta">
+                            <strong>Begha</strong>, Art Director
+                        </div>
+                    </div>
+                    <!-- .testimonial-item end -->
+
+                    <!-- testimonial item #2 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-img">
+                                <i class="fa fa-quote-left"></i>
+                            </div>
+                            <p>The skills of our project managers are attested by international certificates from leading overseas professional associations in the realm of construction, land use and real estate. </p>
+                        </div>
+                        <div class="testimonial-divider">
+                        </div>
+                        <div class="testimonial-meta">
+                            <strong>Habaza</strong>, Civil Engineer
+                        </div>
+                    </div>
+                    <!-- .testimonial-item end -->
+
+                    <!-- testimonial item #3 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-img">
+                                <i class="fa fa-quote-left"></i>
+                            </div>
+                            <p>Yellow Hats Group carries out full-cycle development, including the attraction of investments, construction and managing premium residential and non-residential properties.</p>
+                        </div>
+                        <div class="testimonial-divider">
+                        </div>
+                        <div class="testimonial-meta">
+                            <strong>Fouad Badawy</strong>, Investor
+                        </div>
+                    </div>
+                    <!-- .testimonial-item end -->
+
+                    <!-- testimonial item #4 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-img">
+                                <i class="fa fa-quote-left"></i>
+                            </div>
+                            <p>The skills of our project managers are attested by international certificates from leading overseas professional associations in the realm of construction, land use and real estate.</p>
+                        </div>
+                        <div class="testimonial-divider">
+                        </div>
+                        <div class="testimonial-meta">
+                            <div class="testimonial-name">
+                                <strong>AYMAN FIKRY</strong>, Civil Engineer
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .testimonial-item end -->
+
+                    <!-- testimonial item #5 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-img">
+                                <i class="fa fa-quote-left"></i>
+                            </div>
+                            <p>Yellow Hats Group carries out full-cycle development, including the attraction of investments, construction and managing premium residential and non-residential properties.</p>
+                        </div>
+                        <div class="testimonial-divider">
+                        </div>
+                        <div class="testimonial-meta">
+                            <strong>Fouad Badawy</strong>, Investor
+                        </div>
+                    </div>
+                    <!-- .testimonial-item end -->
+
+                    <!-- testimonial item #6 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-img">
+                                <i class="fa fa-quote-left"></i>
+                            </div>
+                            <p>The skills of our project managers are attested by international certificates from leading overseas professional associations in the realm of construction, land use and real estate. </p>
+                        </div>
+                        <div class="testimonial-divider">
+                        </div>
+                        <div class="testimonial-meta">
+                            <strong>Habaza</strong>, Civil Engineer
+                        </div>
+                    </div>
+                    <!-- .testimonial-item end -->
+
+                </div>
+            </div>
+            <!-- .col-md-12 end -->
+
+        </div>
+        <!-- .row end -->
+
+    </div>
+    <!-- .container end -->
+
+</section>
+<!-- #testimonials end -->
 <!-- Call To Action #3
 ============================================= -->
 <section id="cta-3" class="cta cta-3 bg-overlay bg-overlay-theme text-center">
@@ -734,7 +898,10 @@
                             </div>
                             <div class="widget-contact-info">
                                 <p class="text-capitalize text-white">Adresse</p>
-                                <p class="text-capitalize font-heading">tanta , alGharbia, egypt.</p>
+                                <p class="text-capitalize font-heading">21 rue Félix Gouno
+                                    </p>
+                                <p class="text-capitalize font-heading">97131 petit canal.
+                                    </p>
                             </div>
                         </div>
                         <!-- .widget end -->
@@ -744,7 +911,7 @@
                             </div>
                             <div class="widget-contact-info">
                                 <p class="text-capitalize text-white">Email</p>
-                                <p class="text-capitalize font-heading">7oroof@7oroof.com</p>
+                                <p class="text-capitalize font-heading">hdmsclim.secretariat@gmail.com</p>
                             </div>
                         </div>
                         <!-- .widget end -->
@@ -754,7 +921,7 @@
                             </div>
                             <div class="widget-contact-info">
                                 <p class="text-capitalize text-white">Appel</p>
-                                <p class="text-capitalize font-heading">002 01065370701</p>
+                                <p class="text-capitalize font-heading">0690914868 <br> 0590232962</p>
                             </div>
                         </div>
                         <!-- .widget end -->
