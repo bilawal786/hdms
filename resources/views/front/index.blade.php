@@ -109,7 +109,7 @@
                 <!-- slide 2 -->
                 <li data-transition="fadefrombottom" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000">
                     <!-- MAIN IMAGE -->
-                    <img src="{{asset('front/assets/images/08.jpg')}}"  alt=""  width="1920" height="1280">
+                    <img src="{{asset('front/assets/images/12.jpg')}}"  alt=""  width="1920" height="1280">
 
                 </li>
 
