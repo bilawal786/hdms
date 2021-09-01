@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
+    <?php
+        $gs = \App\GeneralSettings::find(1);
+    ?>
     <!-- Document Meta
     ============================================= -->
     <meta charset="utf-8">
@@ -35,7 +38,7 @@
 
     <!-- Document Title
         ============================================= -->
-    <title>HDMS CLIM</title>
+    <title>{{$gs->sitename}}</title>
 </head>
 <body>
 <header id="navbar-spy" class="full-header header-3 style-2">
@@ -51,7 +54,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="logo" href="">
-                        <img style="height: 100px" src="{{asset('front/assets/images/logo/logo1.png')}}" alt="Yellow Hats">
+                        <img style="height: 100px" src="{{asset($gs->logo)}}" alt="Yellow Hats">
                     </a>
                 </div>
 
@@ -133,7 +136,7 @@
                         </div>
                         <div class="widget-contact-info">
                             <p class="text-capitalize">E-mail</p>
-                            <p class="font-heading text-white">hdmsclim.secretariat@gmail.com</p>
+                            <p class="font-heading text-white">{{$gs->email}}</p>
                         </div>
                     </li>
                     <!-- .widget end -->
@@ -144,7 +147,7 @@
                         </div>
                         <div class="widget-contact-info">
                             <p class="text-capitalize">Téléphone</p>
-                            <p class="text-capitalize font-heading text-white">0690914868</p>
+                            <p class="text-capitalize font-heading text-white">{{$gs->phone1}}</p>
                         </div>
                     </li>
                     <!-- .widget end -->
@@ -1049,9 +1052,9 @@
                             </div>
                             <div class="widget-contact-info">
                                 <p class="text-capitalize text-white">Adresse</p>
-                                <p class="text-capitalize font-heading">21 rue Félix Gouno
+                                <p class="text-capitalize font-heading">{{$gs->address1}}
                                     </p>
-                                <p class="text-capitalize font-heading">97131 petit canal.
+                                <p class="text-capitalize font-heading">{{$gs->address2}}
                                     </p>
                             </div>
                         </div>
@@ -1062,7 +1065,7 @@
                             </div>
                             <div class="widget-contact-info">
                                 <p class="text-capitalize text-white">Email</p>
-                                <p class="text-capitalize font-heading">hdmsclim.secretariat@gmail.com</p>
+                                <p class="text-capitalize font-heading">{{$gs->email}}</p>
                             </div>
                         </div>
                         <!-- .widget end -->
@@ -1072,7 +1075,7 @@
                             </div>
                             <div class="widget-contact-info">
                                 <p class="text-capitalize text-white">Appel</p>
-                                <p class="text-capitalize font-heading">0690914868 <br> 0590232962</p>
+                                <p class="text-capitalize font-heading">{{$gs->phone1}} <br> {{$gs->phone2}}</p>
                             </div>
                         </div>
                         <!-- .widget end -->
@@ -1098,7 +1101,7 @@
                     </div>
                     <div class="widget-about-info">
                         <h5 class="text-capitalize text-white">HDMS</h5>
-                        <p class="mb-0">Lorem Ipsum est simplement un texte factice de l'industrie de l'impression et de la composition. Lorem Ipsum est le texte factice standard .</p>
+                        <p class="mb-0">{{$gs->footer}}</p>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 widget-navigation text-center-xs mb-30-xs">
@@ -1177,10 +1180,10 @@
                             sur les réseaux sociaux</p>
                     </div>
                     <div class="widget-social-icon pull-right text-right pull-none-xs">
-                        <a href="#">
+                        <a href="{{$gs->facebook}}">
                             <i class="fa fa-facebook"></i><i class="fa fa-facebook"></i>
                         </a>
-                        <a href="#">
+                        <a href="{{$gs->instagram}}">
                             <i class="fa fa-google-plus"></i><i class="fa fa-instagram"></i>
                         </a>
                     </div>
