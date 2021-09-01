@@ -43,7 +43,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="">Logo</label>
-                                        <input type="file" name="logo" class="form-control">
+                                        <input type="file" name="logo" accept="image/*" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">

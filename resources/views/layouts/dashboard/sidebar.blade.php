@@ -71,6 +71,18 @@
                                 <p>Réglages Généraux </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('general.slider')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Curseurs </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('general.services')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Nos services </p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 

@@ -3,6 +3,7 @@
 <head>
     <?php
         $gs = \App\GeneralSettings::find(1);
+    $content = \App\Content::find(1);
     ?>
     <!-- Document Meta
     ============================================= -->
@@ -96,7 +97,6 @@
 <!-- Hero Section
 ============================================= -->
 <section id="hero" class="hero hero-4">
-
     <!-- START REVOLUTION SLIDER 5.0 -->
     <div class="rev_slider_wrapper">
         <div id="slider1" class="rev_slider"  data-version="5.0">
@@ -105,21 +105,21 @@
                 <!-- slide 1 -->
                 <li data-transition="3dcurtain-vertical" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" style="background-color: rgba(34, 34, 34, 0.3);">
                     <!-- MAIN IMAGE -->
-                    <img src="{{asset('front/assets/images/08.jpg')}}"  alt="Background"  width="1920" height="1280">
+                    <img src="{{$content->slider1}}"  alt="Background"  width="1920" height="1280">
 
                 </li>
 
                 <!-- slide 2 -->
                 <li data-transition="fadefrombottom" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000">
                     <!-- MAIN IMAGE -->
-                    <img src="{{asset('front/assets/images/12.jpg')}}"  alt=""  width="1920" height="1280">
+                    <img src="{{$content->slider2}}"  alt=""  width="1920" height="1280">
 
                 </li>
 
                 <!-- slide 3 -->
                 <li data-index='rs-367' data-transition='scaledownfromtop' data-slotamount='default' data-easein='default' data-easeout='default' data-masterspeed='default'>
                     <!-- MAIN IMAGE -->
-                    <img src="{{asset('front/assets/images/08.jpg')}}"  alt=""  width="1920" height="1280">
+                    <img src="{{$content->slider3}}"  alt=""  width="1920" height="1280">
                     <!-- LAYER NR. 1 -->
                 </li>
             </ul>
@@ -262,15 +262,15 @@
                     <!-- Service Block #1 -->
                     <div class="col-xs-12 col-sm-4 col-md-4 service-block">
                         <div class="service-img">
-                            <img height="250px" src="{{asset('front/assets/images/07.png')}}" alt="icons"/>
+                            <img height="250px" src="{{asset($content->simage1)}}" alt="icons"/>
                         </div>
 
                         <div class="service-content">
                             <div class="service-desc">
-                                <h4 class="h50">INSTALLATION</h4>
-                                <p class="h110">Tiling is an effective way to add elegance & style to any bath or kitchen Yellow Hats Remodeling specializes in tile installation and works directly with each homeowner.</p>
+                                <h4 class="h50">{{{$content->sh1}}}</h4>
+                                <p class="h110">{{$content->sd1}}</p>
                                 <video width="100%" controls>
-                                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                    <source src="{{asset($content->sv1)}}" type="video/mp4">
                                     Your browser does not support HTML video.
                                 </video>
                             </div>
@@ -281,15 +281,15 @@
                     <!-- Service Block #2 -->
                     <div class="col-xs-12 col-sm-4 col-md-4 service-block">
                         <div class="service-img">
-                            <img height="250px" src="{{asset('front/assets/images/05.png')}}" alt="icons"/>
+                            <img height="250px" src="{{asset($content->simage2)}}" alt="icons"/>
                         </div>
 
                         <div class="service-content">
                             <div class="service-desc">
-                                <h4 class="h50">ENTRETIEN</h4>
-                                <p class="h110">Yellow Hats has full service renovation expertise, we are equipped with the right tools and people to handle projects of all sizes & provide high quality renovation works.</p>
+                                <h4 class="h50">{{$content->sh2}}</h4>
+                                <p class="h110">{{$content->sd2}}</p>
                                 <video width="100%" controls>
-                                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                    <source src="{{$content->sv2}}" type="video/mp4">
                                     Your browser does not support HTML video.
                                 </video>
                             </div>
@@ -300,15 +300,15 @@
                     <!-- Service Block #3 -->
                     <div class="col-xs-12 col-sm-4 col-md-4 service-block">
                         <div class="service-img">
-                            <img height="250px" src="{{asset('front/assets/images/06.png')}}" alt="icons"/>
+                            <img height="250px" src="{{asset($content->simage3)}}" alt="icons"/>
                         </div>
 
                         <div class="service-content">
                             <div class="service-desc">
-                                <h4 class="h50">MAINTENANCE / DEPANNAGE / DIAGNOSTICS</h4>
-                                <p class="h110">Yellow Hats aim to eliminate the task of dividing your project between different architecture and construction company as we offers design and build services for you.</p>
+                                <h4 class="h50">{{$content->sh3}}</h4>
+                                <p class="h110">{{$content->sd3}}</p>
                                 <video width="100%" controls>
-                                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                    <source src="{{$content->sv3}}" type="video/mp4">
                                     Your browser does not support HTML video.
                                 </video>
                             </div>
@@ -325,241 +325,7 @@
     <!-- .container end -->
 </section>
 
-<!-- Projects Section
-============================================= -->
-<!--
-<section id="projects" class="projects-fullwidth projects-4col  pb-0 bg-gray">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-                <div class="heading heading-2 mb-0 text-center">
-                    <div class="heading-bg">
-                        <p class="mb-0">greate&amp; awesome works</p>
-                        <h2>our projects</h2>
-                    </div>
-                </div>
-                &lt;!&ndash; .heading end &ndash;&gt;
-            </div>
-            &lt;!&ndash; .col-md-6 end &ndash;&gt;
-        </div>
-        &lt;!&ndash; .row end &ndash;&gt;
-    </div>
-    &lt;!&ndash; .container end &ndash;&gt;
-    <div class="container-fluid">
-        <div class="row">
-            &lt;!&ndash; Projects Filter
-            ============================================= &ndash;&gt;
-            <div class="col-xs-12 col-sm-12 col-md-12 projects-filter">
-                <ul class="list-inline">
-                    <li>
-                        <a class="active-filter" href="#" data-filter="*">All Projects</a>
-                    </li>
-                    <li>
-                        <a href="#" data-filter=".interior">Interior</a>
-                    </li>
-                    <li>
-                        <a href="#" data-filter=".renovation">Renovation</a>
-                    </li>
-                    <li>
-                        <a href="#" data-filter=".architecture">Architecture</a>
-                    </li>
-                    <li>
-                        <a href="#" data-filter=".landscaping">Landscaping</a>
-                    </li>
-                    <li>
-                        <a href="#" data-filter=".gardening">Gardening</a>
-                    </li>
-                </ul>
-            </div>
-            &lt;!&ndash; .projects-filter end &ndash;&gt;
-        </div>
-        &lt;!&ndash; .row end &ndash;&gt;
-
-        &lt;!&ndash; Projects Item
-        ============================================= &ndash;&gt;
-        <div id="projects-all" class="row">
-
-            &lt;!&ndash; Project Item #1 &ndash;&gt;
-            <div class="col-xs-12 col-sm-6 col-md-3 project-item interior gardening">
-                <div class="project-img">
-                    <img class="" src="{{asset('front/assets/images/projects/small/4.jpg')}}" alt="interior"/>
-                    <div class="project-hover">
-                        <div class="project-meta">
-                            <h6>Interior</h6>
-                            <h4>
-                                <a href="#">New Office Room</a>
-                            </h4>
-                        </div>
-                        <div class="project-zoom">
-                            <a class="img-popup" href="{{asset('front/assets/images/projects/full/4.jpg')}}" title="New Office Room"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    &lt;!&ndash; .project-hover end &ndash;&gt;
-                </div>
-                &lt;!&ndash; .project-img end &ndash;&gt;
-
-            </div>
-            &lt;!&ndash; .project-item end &ndash;&gt;
-
-            &lt;!&ndash; Project Item #2 &ndash;&gt;
-            <div class="col-xs-12 col-sm-6 col-md-3 project-item renovation landscaping">
-                <div class="project-img">
-                    <img class="" src="{{asset('front/assets/images/projects/small/1.jpg')}}" alt="interior"/>
-                    <div class="project-hover">
-                        <div class="project-meta">
-                            <h6>Interior</h6>
-                            <h4>
-                                <a href="#">New Office Room</a>
-                            </h4>
-                        </div>
-                        <div class="project-zoom">
-                            <a class="img-popup" href="{{asset('front/assets/images/projects/full/1.jpg')}}" title="New Office Room"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    &lt;!&ndash; .project-hover end &ndash;&gt;
-                </div>
-                &lt;!&ndash; .project-img end &ndash;&gt;
-
-            </div>
-            &lt;!&ndash; .project-item end &ndash;&gt;
-
-            &lt;!&ndash; Project Item #3 &ndash;&gt;
-            <div class="col-xs-12 col-sm-6 col-md-3 project-item interior landscaping">
-                <div class="project-img">
-                    <img class="" src="{{asset('front/assets/images/projects/small/2.jpg')}}" alt="interior"/>
-                    <div class="project-hover">
-                        <div class="project-meta">
-                            <h6>Interior</h6>
-                            <h4>
-                                <a href="#">New Office Room</a>
-                            </h4>
-                        </div>
-                        <div class="project-zoom">
-                            <a class="img-popup" href="{{asset('front/assets/images/projects/full/2.jpg')}}" title="New Office Room"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    &lt;!&ndash; .project-hover end &ndash;&gt;
-                </div>
-                &lt;!&ndash; .project-img end &ndash;&gt;
-
-            </div>
-            &lt;!&ndash; .project-item end &ndash;&gt;
-
-            &lt;!&ndash; Project Item #4 &ndash;&gt;
-            <div class="col-xs-12 col-sm-6 col-md-3 project-item architecture">
-                <div class="project-img">
-                    <img class="" src="{{asset('front/assets/images/projects/small/3.jpg')}}" alt="interior"/>
-                    <div class="project-hover">
-                        <div class="project-meta">
-                            <h6>Interior</h6>
-                            <h4>
-                                <a href="#">New Office Room</a>
-                            </h4>
-                        </div>
-                        <div class="project-zoom">
-                            <a class="img-popup" href="{{asset('front/assets/images/projects/full/3.jpg')}}" title="New Office Room"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    &lt;!&ndash; .project-hover end &ndash;&gt;
-                </div>
-                &lt;!&ndash; .project-img end &ndash;&gt;
-
-            </div>
-            &lt;!&ndash; .project-item end &ndash;&gt;
-
-            &lt;!&ndash; Project Item #5 &ndash;&gt;
-            <div class="col-xs-12 col-sm-6 col-md-3 project-item interior">
-                <div class="project-img">
-                    <img class="" src="{{asset('front/assets/images/projects/small/5.jpg')}}" alt="interior"/>
-                    <div class="project-hover">
-                        <div class="project-meta">
-                            <h6>Interior</h6>
-                            <h4>
-                                <a href="#">New Office Room</a>
-                            </h4>
-                        </div>
-                        <div class="project-zoom">
-                            <a class="img-popup" href="{{asset('front/assets/images/projects/full/5.jpg')}}" title="New Office Room"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    &lt;!&ndash; .project-hover end &ndash;&gt;
-                </div>
-                &lt;!&ndash; .project-img end &ndash;&gt;
-
-            </div>
-            &lt;!&ndash; .project-item end &ndash;&gt;
-
-            &lt;!&ndash; Project Item #6 &ndash;&gt;
-            <div class="col-xs-12 col-sm-6 col-md-3 project-item interior">
-                <div class="project-img">
-                    <img class="" src="{{asset('front/assets/images/projects/small/6.jpg')}}" alt="interior"/>
-                    <div class="project-hover">
-                        <div class="project-meta">
-                            <h6>Interior</h6>
-                            <h4>
-                                <a href="#">New Office Room</a>
-                            </h4>
-                        </div>
-                        <div class="project-zoom">
-                            <a class="img-popup" href="{{asset('front/assets/images/projects/full/6.jpg')}}" title="New Office Room"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    &lt;!&ndash; .project-hover end &ndash;&gt;
-                </div>
-                &lt;!&ndash; .project-img end &ndash;&gt;
-
-            </div>
-            &lt;!&ndash; .project-item end &ndash;&gt;
-
-            &lt;!&ndash; Project Item #7 &ndash;&gt;
-            <div class="col-xs-12 col-sm-6 col-md-3 project-item interior">
-                <div class="project-img">
-                    <img class="" src="{{asset('front/assets/images/projects/small/7.jpg')}}" alt="interior"/>
-                    <div class="project-hover">
-                        <div class="project-meta">
-                            <h6>Interior</h6>
-                            <h4>
-                                <a href="#">New Office Room</a>
-                            </h4>
-                        </div>
-                        <div class="project-zoom">
-                            <a class="img-popup" href="{{asset('front/assets/images/projects/full/7.jpg')}}" title="New Office Room"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    &lt;!&ndash; .project-hover end &ndash;&gt;
-                </div>
-                &lt;!&ndash; .project-img end &ndash;&gt;
-
-            </div>
-            &lt;!&ndash; .project-item end &ndash;&gt;
-
-            &lt;!&ndash; Project Item #8 &ndash;&gt;
-            <div class="col-xs-12 col-sm-6 col-md-3 project-item architecture">
-                <div class="project-img">
-                    <img class="" src="{{asset('front/assets/images/projects/small/8.jpg')}}" alt="interior"/>
-                    <div class="project-hover">
-                        <div class="project-meta">
-                            <h6>Interior</h6>
-                            <h4>
-                                <a href="#">New Office Room</a>
-                            </h4>
-                        </div>
-                        <div class="project-zoom">
-                            <a class="img-popup" href="{{asset('front/assets/images/projects/full/8.jpg')}}" title="New Office Room"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    &lt;!&ndash; .project-hover end &ndash;&gt;
-                </div>
-                &lt;!&ndash; .project-img end &ndash;&gt;
-
-            </div>
-            &lt;!&ndash; .project-item end &ndash;&gt;
-        </div>
-        &lt;!&ndash; .row end &ndash;&gt;
-    </div>
-    &lt;!&ndash; .container end &ndash;&gt;
-</section>
--->
+{{--offers--}}
 <section>
     <div class="container">
         <div class="row pb-20">
@@ -763,50 +529,7 @@
                 </div>
                 <!-- End .Accordion-->
             </div>
-            <!-- .col-md-6 end -->
-<!--            <div class="col-xs-12 col-sm-12 col-md-6">
-                <div id="testimonial-oc-5"  class="testimonial-slide testimonial testimonial-3">
-                    <div class="testimonial-item">
-                        <div class="testimonial-content">
-                            <p>Chez HDMS, comprendre les besoins des clients est notre devoir professionnel. Nous évaluons individuellement chaque plan et proposons des solutions optimales, en partant des objectifs et des spécificités du projet. La situation financière stable de l'entreprise nous permet de fixer des taux de paiement anticipé minimaux et un calendrier de financement confortable pour notre formidable client</p>
-                            <div class="testimonial-img">
-                                <img src="{{asset('front/assets/images/testimonial/3.png')}}" alt="author"/>
-                            </div>
-                        </div>
-                        <div class="testimonial-meta">
-                            <strong>Begha</strong>, Art Director
-                        </div>
-                    </div>
-                    &lt;!&ndash; .testimonial-item end &ndash;&gt;
 
-                    <div class="testimonial-item">
-                        <div class="testimonial-content">
-                            <p>Les compétences de nos chefs de projets sont attestées par des certificats internationaux délivrés par les principales associations professionnelles étrangères dans le domaine de la construction, de l'aménagement du territoire et de l'immobilier.. </p>
-                            <div class="testimonial-img">
-                                <img src="{{asset('front/assets/images/testimonial/2.png')}}" alt="author"/>
-                            </div>
-                        </div>
-                        <div class="testimonial-meta">
-                            <strong>Habaza</strong>, Civil Engineer
-                        </div>
-                    </div>
-                    &lt;!&ndash; .testimonial-item end &ndash;&gt;
-
-                    <div class="testimonial-item">
-                        <div class="testimonial-content">
-                            <p>Yellow Hats Group réalise un cycle complet de développement, y compris l'attraction d'investissements, la construction et la gestion de propriétés résidentielles et non résidentielles haut de gamme.</p>
-                            <div class="testimonial-img">
-                                <img src="{{asset('front/assets/images/testimonial/1.png')}}" alt="author"/>
-                            </div>
-                        </div>
-                        <div class="testimonial-meta">
-                            <strong>Fouad Badawy</strong>, Investor
-                        </div>
-                    </div>
-                    &lt;!&ndash; .testimonial-item end &ndash;&gt;
-                </div>
-            </div>-->
-            <!-- .col-md-6 end -->
         </div>
         <!-- .row end -->
     </div>
