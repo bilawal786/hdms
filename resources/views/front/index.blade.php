@@ -10,77 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="construction html5 template">
     <link href="{{asset('front/assets/images/logo/hdms.png')}}" rel="icon">
-    <style>
-        .navbar-nav > li.active {
-            border-bottom: 2px solid #4169e1 !important;
-        }
-        .navbar-nav > li:after {
-            background: #4169e1 !important;
-        }
-        .btn-primary {
-            background-color: #4169e1 !important;
-            color: #fff;
-            border: 2px solid #4169e1 !important;
-        }
-        .widgets-contact .widget-contact-icon:after {
-            background-color: #4169e1 !important;
-        }
-        .service-4 .service-block:hover .service-icon {
-            background-color: #4169e1 !important;
-        }
-        .heading-bg:before {
-            border: 2px solid #4169e1 !important;
-        }
-        .testimonial-3 .testimonial-content {
-            background-color: #4169e1 !important;
-        }
-        .accordion .panel-heading .accordion-toggle:after {
-            background-color: #4169e1 !important;
-        }
-        .bg-overlay-theme:before {
-            background-color: #4169e1 !important;
-        }
-        .bg-theme {
-            background-color: #4169e1 !important;
-        }
-        .copyrights a {
-            color: #4169e1 !important;
-        }
-        .service-3 .service-block:hover h4, .service-4 .service-block:hover h4, .service-5 .service-block:hover h4 {
-            color: #4169e1 !important;
-        }
-        .navbar-toggle {
-            border-color: #4169e1 !important;
-        }
-        .navbar-toggle .icon-bar {
-            background-color: #4169e1 !important;
-        }
-        a:hover {
-            color: #4169e1 !important;
-        }
-        .accordion .panel-heading .accordion-toggle.collapsed::after {
-            color: #fafafa !important;
-            background-color: transparent;
-        }
-        .cta-1, .cta-2 {
-            background-color: #fafafa !important;
-        }
-        .service-4 .service-desc, .service-5 .service-desc {
-            padding-left: 0px !important;
-        }
-        .h110{
-            height: 110px
-        }
-        .h50{
-            height: 50px;
-        }
-        .service-4 .service-content {
-             margin-bottom: 0px !important;
-        }
-        .testimonial-img i {
-            background-color: #4169e1 !important;
-        }
-    </style>
+    @include('include.css')
     <!-- Fonts
     ============================================= -->
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CRaleway:100,200,300,400,500,600,700,800%7CDroid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -108,16 +38,6 @@
     <title>HDMS CLIM</title>
 </head>
 <body>
-<!--<div class="preloader">
-    <div class="spinner">
-        <div class="bounce1">
-        </div>
-        <div class="bounce2">
-        </div>
-        <div class="bounce3">
-        </div>
-    </div>
-</div>-->
 <header id="navbar-spy" class="full-header header-3 style-2">
     <nav id="primary-menu" class="navbar navbar-fixed-top">
         <div class="row">
@@ -252,12 +172,63 @@
                                     </div>
                                     <!-- .model-header end -->
                                     <div class="modal-body">
+<!--                                        <p style="text-align: center">
+                                           <b> Devis climatisation : faites une demande de devis (gratuit et rapide)</b>
+                                            <br>
+                                            Vous voulez refroidir une ou plusieurs pièces de votre habitation et améliorer votre confort de vie à la maison ? Vous souhaitez savoir à quel prix faire installer une climatisation ? HDMS CLIM est le service de référence pour faire installer une climatisation facilement et rapidement chez vous.
+                                        </p>-->
+
+<!--                                        <form id="regForm" action="/action_page.php">
+                                            &lt;!&ndash; One "tab" for each step in the form: &ndash;&gt;
+                                            <div class="tab">
+                                                <p><input type="number" class="form-control" placeholder="Quel est votre code postal ?" name="postal"></p>
+                                            </div>
+                                            <div class="tab">
+                                                <h3>Quel type d'intervention souhaitez?</h3>
+                                                <p><input type="radio"  name="type" >  Installation d'une seule climatisation</p>
+                                                <p><input type="radio"  name="type">  Installation de plusieurs climatisations</p>
+                                                <p><input type="radio" name="type">   Entretien et réparation</p>
+                                            </div>
+                                            <div class="tab">
+                                                <h3>Quel est le lieu de l'Intervention ?</h3>
+                                                <p><input type="radio"  name="place" > Maison</p>
+                                                <p><input type="radio"  name="place"> Appartement</p>
+                                                <p><input type="radio" name="place"> Immeuble</p>
+                                                <p><input type="radio" name="place"> Magasin</p>
+                                                <p><input type="radio" name="place"> Autre</p>
+                                            </div>
+                                            <div class="tab">
+                                                <h3>Combien de pièces souhaitez-vous climatiser ?</h3>
+                                                <p><input type="radio"  name="piece" > 1 pièce</p>
+                                                <p><input type="radio"  name="piece"> 2 pièces</p>
+                                                <p><input type="radio" name="piece"> 3 pièces</p>
+                                                <p><input type="radio" name="piece"> 4 pièces</p>
+                                                <p><input type="radio" name="piece"> 5 pièces</p>
+                                            </div>
+                                            <div class="tab">
+                                                <h3>Quelle est la surface à climatiser ?</h3>
+                                                <p><input class="form-control" placeholder="Username..." name="uname">m</p>
+                                            </div>
+                                            <div>
+                                                <div>
+                                                    <button type="button" class="btn btn-primary" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                                                    <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                                                </div>
+                                            </div>
+                                            &lt;!&ndash; Circles which indicates the steps of the form: &ndash;&gt;
+                                            <div style="text-align:center;margin-top:40px;">
+                                                <span class="step"></span>
+                                                <span class="step"></span>
+                                                <span class="step"></span>
+                                                <span class="step"></span>
+                                            </div>
+                                        </form>-->
                                         <form id="pop-quote-form" action="assets/php/sendpopquote.php" method="post">
-                                            <input type="text" class="form-control" name="quote-name" id="name" placeholder="Votre Nom" required/>
+                                            <input type="text" class="form-control" name="quote-name" id="name" placeholder="Votre Nam" required/>
                                             <input type="email" class="form-control" name="quote-email" id="email" placeholder="Votre Email" required/>
-                                            <input type="text" class="form-control" name="quote-telephone" id="telephone" placeholder="Telephoner" required/>
+                                            <input type="text" class="form-control" name="quote-telephone" id="telephone" placeholder="Telephone" required/>
                                             <textarea class="form-control" name="quote-message"  id="quote" placeholder="Détails du devis" rows="2" required></textarea>
-                                            <button type="submit" class="btn btn-primary btn-black btn-block">Soumettre une demande</button>
+                                            <button type="submit" class="btn btn-primary btn-black btn-block">Soumettre la requête</button>
                                             <!--Alert Message-->
                                             <div id="pop-quote-result" class="mt-xs">
                                             </div>
@@ -586,7 +557,116 @@
     &lt;!&ndash; .container end &ndash;&gt;
 </section>
 -->
+<section>
+    <div class="container">
+        <div class="row pb-20">
+            <div class="col-md-4">
+                <img class="w100 pb-20" src="{{asset('front/assets/images/10.png')}}" alt="">
+                <div class="countdown-wrap pb-20">
+                    <div class="countdown item-4" data-countdown="2021-06-15T12:00:00+00:00" data-format="short">
+                        <div class="countdown__item">
+                            <span class="countdown__time daysLeft"></span>
+                            <span style="font-size: 10px" class="countdown__text daysText"></span>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="countdown__time hoursLeft"></span>
+                            <span style="font-size: 10px" class="countdown__text hoursText"></span>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="countdown__time minsLeft"></span>
+                            <span style="font-size: 10px" class="countdown__text minsText"></span>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="countdown__time secsLeft"></span>
+                            <span style="font-size: 10px" class="countdown__text secsText"></span>
+                        </div>
+                    </div>
+                </div>
+                <button data-toggle="modal" data-target="#model-quote" class="btn btn-primary pb-20">Acheter maintenant</button>
+            </div>
+            <div class="col-md-4 mdn">
+                <img class="w100" style="margin-top: 200px; margin-bottom: -100px" src="{{asset('front/assets/images/11.jpeg')}}" alt="">
+            </div>
+            <div class="col-md-4">
+                <img class="w100 pb-20" src="{{asset('front/assets/images/10.png')}}" alt="">
+                <div class="countdown-wrap pb-20">
+                    <div class="countdown item-4" data-countdown="2021-06-15T12:00:00+00:00" data-format="short">
+                        <div class="countdown__item">
+                            <span class="countdown__time daysLeft"></span>
+                            <span style="font-size: 10px" class="countdown__text daysText"></span>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="countdown__time hoursLeft"></span>
+                            <span style="font-size: 10px" class="countdown__text hoursText"></span>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="countdown__time minsLeft"></span>
+                            <span style="font-size: 10px" class="countdown__text minsText"></span>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="countdown__time secsLeft"></span>
+                            <span style="font-size: 10px" class="countdown__text secsText"></span>
+                        </div>
+                    </div>
+                </div>
+                <button data-toggle="modal" data-target="#model-quote" class="btn btn-primary pb-20">Acheter maintenant</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img class="w100 pb-20" src="{{asset('front/assets/images/10.png')}}" alt="">
+                <div class="countdown-wrap pb-20">
+                    <div class="countdown item-4" data-countdown="2021-06-15T12:00:00+00:00" data-format="short">
+                        <div class="countdown__item">
+                            <span class="countdown__time daysLeft"></span>
+                            <span style="font-size: 10px" class="countdown__text daysText"></span>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="countdown__time hoursLeft"></span>
+                            <span style="font-size: 10px" class="countdown__text hoursText"></span>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="countdown__time minsLeft"></span>
+                            <span style="font-size: 10px" class="countdown__text minsText"></span>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="countdown__time secsLeft"></span>
+                            <span style="font-size: 10px" class="countdown__text secsText"></span>
+                        </div>
+                    </div>
+                </div>
+                <button data-toggle="modal" data-target="#model-quote" class="btn btn-primary pb-20">Acheter maintenant</button>
+            </div>
+            <div class="col-md-4">
 
+            </div>
+            <div class="col-md-4">
+                <img class="w100 pb-20" src="{{asset('front/assets/images/10.png')}}" alt="">
+                <div class="countdown-wrap pb-20">
+                    <div class="countdown item-4" data-countdown="2021-06-15T12:00:00+00:00" data-format="short">
+                        <div class="countdown__item">
+                            <span class="countdown__time daysLeft"></span>
+                            <span style="font-size: 10px" class="countdown__text daysText"></span>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="countdown__time hoursLeft"></span>
+                            <span style="font-size: 10px" class="countdown__text hoursText"></span>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="countdown__time minsLeft"></span>
+                            <span style="font-size: 10px" class="countdown__text minsText"></span>
+                        </div>
+                        <div class="countdown__item">
+                            <span class="countdown__time secsLeft"></span>
+                            <span style="font-size: 10px" class="countdown__text secsText"></span>
+                        </div>
+                    </div>
+                </div>
+                <button data-toggle="modal" data-target="#model-quote" class="btn btn-primary pb-20">Acheter maintenant</button>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Shortcode #10
 ============================================= -->
 <section>
@@ -879,7 +959,78 @@
 </section>
 <!-- #cta-3 end -->
 
+<!-- Shortcode #9
+============================================= -->
+<section id="clients" class="shortcode-9">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="heading heading-2 text-center">
+                    <div class="heading-bg">
+                        <p class="mb-0">Ils nous font toujours confiance</p>
+                        <h2>Nos clients</h2>
+                    </div>
+                </div>
+                <!-- .heading end -->
+            </div>
+            <!-- .col-md-12 end -->
+        </div>
+        <!-- .row end -->
+        <div class="row">
+            <!-- Client Item -->
+            <div class="col-xs-12 col-sm-4 col-md-1">
+                <div class="brand">
+                </div>
+            </div>
+            <!-- Client Item -->
+            <div class="col-xs-12 col-sm-4 col-md-2">
+                <div class="brand">
+                    <img class="img-responsive center-block" src="{{asset('front/assets/images/clients/01.jpg')}}" alt="brand">
+                </div>
+            </div>
+            <!-- .col-md-2 end -->
 
+            <!-- Client Item -->
+            <div class="col-xs-12 col-sm-4 col-md-2">
+                <div class="brand">
+                    <img class="img-responsive center-block" src="{{asset('front/assets/images/clients/02.jpg')}}" alt="brand">
+                </div>
+            </div>
+            <!-- .col-md-2 end -->
+
+            <!-- Client Item -->
+            <div class="col-xs-12 col-sm-4 col-md-2">
+                <div class="brand">
+                    <img class="img-responsive center-block" src="{{asset('front/assets/images/clients/03.jpg')}}" alt="brand">
+                </div>
+            </div>
+            <!-- .col-md-2 end -->
+
+            <!-- Client Item -->
+            <div class="col-xs-12 col-sm-4 col-md-2">
+                <div class="brand">
+                    <img class="img-responsive center-block" src="{{asset('front/assets/images/clients/04.jpg')}}" alt="brand">
+                </div>
+            </div>
+            <!-- .col-md-2 end -->
+
+            <!-- Client Item -->
+            <div class="col-xs-12 col-sm-4 col-md-2">
+                <div class="brand">
+                    <img class="img-responsive center-block" src="{{asset('front/assets/images/clients/05.jpg')}}" alt="brand">
+                </div>
+            </div>
+            <!-- .col-md-2 end -->
+            <div class="col-xs-12 col-sm-4 col-md-1">
+                <div class="brand">
+                </div>
+            </div>
+        </div>
+        <!-- .row End -->
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #clients end-->
 
 <!-- Call To Action #1
 ============================================= -->
@@ -1091,44 +1242,6 @@
 <script type="text/javascript" src="{{asset('front/assets/revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('front/assets/revolution/js/extensions/revolution.extension.migration.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('front/assets/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery("#slider1").revolution({
-            sliderType:"standard",
-            sliderLayout:"auto",
-            delay:6000,
-            disableProgressBar:"on",
-            spinner:"off",
-            navigation: {
-                keyboardNavigation:"off",
-                keyboard_direction: "horizontal",
-                mouseScrollNavigation:"off",
-                onHoverStop:"off",
-                arrows: {
-                    style:"arrow",
-                    enable:true,
-                    hide_onmobile:false,
-                    hide_onleave:false,
-                    tmp:'',
-                    left: {
-                        h_align:"left",
-                        v_align:"bottom",
-                        h_offset:110,
-                        v_offset:35
-                    },
-                    right: {
-                        h_align:"left",
-                        v_align:"bottom",
-                        h_offset:150,
-                        v_offset:35
-                    }
-                }
-            },
-            gridwidth:1230,
-            gridheight:800 ,
-
-        });
-    });
-</script>
+@include('include.js')
 </body>
 </html>
