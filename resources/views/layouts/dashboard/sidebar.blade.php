@@ -83,8 +83,27 @@
                                 <p>Nos services </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('general.content')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Teneur </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('testimonial.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Témoignage </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('offers.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p> Nos offres </p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
+
 
             @else
 

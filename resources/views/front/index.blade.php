@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
-    <?php
-        $gs = \App\GeneralSettings::find(1);
-    $content = \App\Content::find(1);
-    ?>
     <!-- Document Meta
     ============================================= -->
     <meta charset="utf-8">
@@ -62,25 +58,28 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left">
-                        <li class="has-dropdown active">
-                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Accueil</a>
+                        <li class="active">
+                            <a href="{{route('front.index')}}">Accueil</a>
                         </li>
 
                         <!-- li end -->
-                        <li class="has-dropdown">
-                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Nos services</a>
+                        <li>
+                            <a href="#myser" >Nos services</a>
+                        </li>
+                        <li>
+                            <a href="#offers" >Nos Offres</a>
                         </li>
                         <!-- li end -->
-                        <li class="has-dropdown">
-                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">À propos de nous</a>
+                        <li>
+                            <a href="#about" >À propos de nous</a>
                         </li>
                         <!-- li end -->
-                        <li class="has-dropdown">
-                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Témoignages</a>
+                        <li>
+                            <a href="#testimonials">Témoignages</a>
                         </li>
                         <!-- li end -->
-                        <li class="has-dropdown pull-left">
-                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Contact</a>
+                        <li>
+                            <a href="#clients">Clients</a>
                         </li>
                         <!-- li end -->
                     </ul>
@@ -254,7 +253,7 @@
 
 <!-- Service Block #4
 ============================================= -->
-<section class="service service-4" style="padding-bottom: 0px">
+<section class="service service-4" id="myser" style="padding-bottom: 0px">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -326,13 +325,13 @@
 </section>
 
 {{--offers--}}
-<section>
+<section id="offers">
     <div class="container">
         <div class="row pb-20">
             <div class="col-md-4">
-                <img class="w100 pb-20" src="{{asset('front/assets/images/10.png')}}" alt="">
+                <img class="w100 pb-20" src="{{asset($offers->image1)}}" alt="">
                 <div class="countdown-wrap pb-20">
-                    <div class="countdown item-4" data-countdown="2021-06-15T12:00:00+00:00" data-format="short">
+                    <div class="countdown item-4" data-countdown="{{$offers->valid1}}" data-format="short">
                         <div class="countdown__item">
                             <span class="countdown__time daysLeft"></span>
                             <span style="font-size: 10px" class="countdown__text daysText"></span>
@@ -351,15 +350,15 @@
                         </div>
                     </div>
                 </div>
-                <button data-toggle="modal" data-target="#model-quote" class="btn btn-primary pb-20">Acheter maintenant</button>
+                <button data-toggle="modal" data-target="#model-quote" class="btn btn-primary pb-20">Acheter maintenant </button>
             </div>
             <div class="col-md-4 mdn">
                 <img class="w100" style="margin-top: 200px; margin-bottom: -100px" src="{{asset('front/assets/images/11.jpeg')}}" alt="">
             </div>
             <div class="col-md-4">
-                <img class="w100 pb-20" src="{{asset('front/assets/images/10.png')}}" alt="">
+                <img class="w100 pb-20" src="{{asset($offers->image2)}}" alt="">
                 <div class="countdown-wrap pb-20">
-                    <div class="countdown item-4" data-countdown="2021-06-15T12:00:00+00:00" data-format="short">
+                    <div class="countdown item-4" data-countdown="{{$offers->valid2}}" data-format="short">
                         <div class="countdown__item">
                             <span class="countdown__time daysLeft"></span>
                             <span style="font-size: 10px" class="countdown__text daysText"></span>
@@ -383,9 +382,9 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <img class="w100 pb-20" src="{{asset('front/assets/images/10.png')}}" alt="">
+                <img class="w100 pb-20" src="{{asset($offers->image3)}}" alt="">
                 <div class="countdown-wrap pb-20">
-                    <div class="countdown item-4" data-countdown="2021-06-15T12:00:00+00:00" data-format="short">
+                    <div class="countdown item-4" data-countdown="{{$offers->valid3}}" data-format="short">
                         <div class="countdown__item">
                             <span class="countdown__time daysLeft"></span>
                             <span style="font-size: 10px" class="countdown__text daysText"></span>
@@ -404,15 +403,15 @@
                         </div>
                     </div>
                 </div>
-                <button data-toggle="modal" data-target="#model-quote" class="btn btn-primary pb-20">Acheter maintenant</button>
+                <button data-toggle="modal" data-target="#model-quote" class="btn btn-primary pb-20">Acheter maintenant </button>
             </div>
             <div class="col-md-4">
 
             </div>
             <div class="col-md-4">
-                <img class="w100 pb-20" src="{{asset('front/assets/images/10.png')}}" alt="">
+                <img class="w100 pb-20" src="{{asset($offers->image4)}}" alt="">
                 <div class="countdown-wrap pb-20">
-                    <div class="countdown item-4" data-countdown="2021-06-15T12:00:00+00:00" data-format="short">
+                    <div class="countdown item-4" data-countdown="{{$offers->valid4}}" data-format="short">
                         <div class="countdown__item">
                             <span class="countdown__time daysLeft"></span>
                             <span style="font-size: 10px" class="countdown__text daysText"></span>
@@ -438,7 +437,7 @@
 </section>
 <!-- Shortcode #10
 ============================================= -->
-<section>
+<section id="about">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -468,24 +467,7 @@
                         </div>
                         <div id="collapse02-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                             <div class="panel-body text-justify">
-                               <b> HDMS Clim, est à votre service pour l’achat, la
-                                pose, la maintenance le diagnostic et le dépannage de votre
-                                climatisation.</b>
-                                <br>
-                                <br>
-
-                                Nos équipes sont à votre disposition pour répondre à toutes vos problématiques
-                                concernant la climatisation que vous soyez particuliers ou professionnels. <br>
-                                Disposant de plusieurs équipes spécialisées, nous sommes en mesure d’installer
-                                votre climatisation et en assure le bon fonctionnement à travers nos équipes de
-                                dépannage de climatisation ainsi que de maintenance. <br>
-
-                                Disposant de nombreuses certifications, nous travaillons uniquement avec des
-                                marques de climatisations reconnues permettant un service optimale. <br>
-                                Nos prestations globales pour tous les systèmes de génie climatique nous
-                                permettent de rester à la pointe de notre secteur afin de climatiser au mieux
-
-                                l’ensemble de vos locaux et Habitation.
+                                {!! $content->about !!}
                              </div>
                         </div>
                     </div>
@@ -499,14 +481,7 @@
                         </div>
                         <div id="collapse02-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                             <div class="panel-body">
-                                <b>
-                                (R)espect d’autrui <br>
-                                (E)sprit d’équipe <br>
-                                (S)atisfaction client <br>
-                                (P)artage du savoir-faire <br>
-                                (E)ngagement <br>
-                                (C)confiance <br>
-                                (T)ravail de qualité.</b>
+                                {!! $content->values !!}
                                  </div>
                         </div>
                     </div>
@@ -520,9 +495,7 @@
                         </div>
                         <div id="collapse02-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                             <div class="panel-body">
-                                HDNS Clim s’est attachée à conserver les valeurs qui ont animé sa création.
-                                Une charte d’engagement a été établie pour conduire chaque professionnel à
-                                s’impliquer de manière identique.
+                                {!! $content->engagement !!}
                                 </div>
                         </div>
                     </div>
@@ -551,104 +524,22 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div id="testimonial-oc" class="testimonial-carousel">
-
-                    <!-- testimonial item #1 -->
+                    @foreach($testimonials as $testimonial)
                     <div class="testimonial-item">
                         <div class="testimonial-content">
                             <div class="testimonial-img">
                                 <i class="fa fa-quote-left"></i>
                             </div>
-                            <p>The company’s experts have accumulated valuable experience in green development, being savvy to all aspects of the certification process and requirements.</p>
+                            <p>{{$testimonial->review}}</p>
                         </div>
                         <div class="testimonial-divider">
                         </div>
                         <div class="testimonial-meta">
-                            <strong>Begha</strong>, Art Director
+                            <strong>{{$testimonial->name}}</strong>, {{$testimonial->designation}}
                         </div>
                     </div>
-                    <!-- .testimonial-item end -->
+                    @endforeach
 
-                    <!-- testimonial item #2 -->
-                    <div class="testimonial-item">
-                        <div class="testimonial-content">
-                            <div class="testimonial-img">
-                                <i class="fa fa-quote-left"></i>
-                            </div>
-                            <p>The skills of our project managers are attested by international certificates from leading overseas professional associations in the realm of construction, land use and real estate. </p>
-                        </div>
-                        <div class="testimonial-divider">
-                        </div>
-                        <div class="testimonial-meta">
-                            <strong>Habaza</strong>, Civil Engineer
-                        </div>
-                    </div>
-                    <!-- .testimonial-item end -->
-
-                    <!-- testimonial item #3 -->
-                    <div class="testimonial-item">
-                        <div class="testimonial-content">
-                            <div class="testimonial-img">
-                                <i class="fa fa-quote-left"></i>
-                            </div>
-                            <p>Yellow Hats Group carries out full-cycle development, including the attraction of investments, construction and managing premium residential and non-residential properties.</p>
-                        </div>
-                        <div class="testimonial-divider">
-                        </div>
-                        <div class="testimonial-meta">
-                            <strong>Fouad Badawy</strong>, Investor
-                        </div>
-                    </div>
-                    <!-- .testimonial-item end -->
-
-                    <!-- testimonial item #4 -->
-                    <div class="testimonial-item">
-                        <div class="testimonial-content">
-                            <div class="testimonial-img">
-                                <i class="fa fa-quote-left"></i>
-                            </div>
-                            <p>The skills of our project managers are attested by international certificates from leading overseas professional associations in the realm of construction, land use and real estate.</p>
-                        </div>
-                        <div class="testimonial-divider">
-                        </div>
-                        <div class="testimonial-meta">
-                            <div class="testimonial-name">
-                                <strong>AYMAN FIKRY</strong>, Civil Engineer
-                            </div>
-                        </div>
-                    </div>
-                    <!-- .testimonial-item end -->
-
-                    <!-- testimonial item #5 -->
-                    <div class="testimonial-item">
-                        <div class="testimonial-content">
-                            <div class="testimonial-img">
-                                <i class="fa fa-quote-left"></i>
-                            </div>
-                            <p>Yellow Hats Group carries out full-cycle development, including the attraction of investments, construction and managing premium residential and non-residential properties.</p>
-                        </div>
-                        <div class="testimonial-divider">
-                        </div>
-                        <div class="testimonial-meta">
-                            <strong>Fouad Badawy</strong>, Investor
-                        </div>
-                    </div>
-                    <!-- .testimonial-item end -->
-
-                    <!-- testimonial item #6 -->
-                    <div class="testimonial-item">
-                        <div class="testimonial-content">
-                            <div class="testimonial-img">
-                                <i class="fa fa-quote-left"></i>
-                            </div>
-                            <p>The skills of our project managers are attested by international certificates from leading overseas professional associations in the realm of construction, land use and real estate. </p>
-                        </div>
-                        <div class="testimonial-divider">
-                        </div>
-                        <div class="testimonial-meta">
-                            <strong>Habaza</strong>, Civil Engineer
-                        </div>
-                    </div>
-                    <!-- .testimonial-item end -->
 
                 </div>
             </div>
@@ -671,11 +562,9 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-                <h2>La qualité avant tout</h2>
-                <p>Le système de gestion de la qualité de la construction de pointe LATISTA garantit des normes de qualité élevées sur tous les sites de l'entreprise. Le mécanisme de contrôle permet un suivi intégré des travaux à toutes les étapes de la construction et comprend plus de 100 références d'évaluation de la qualité.</p>
-                <div class="signiture">
-                    <img src="{{asset('front/assets/images/call/sign.png')}}" alt="signiture"/>
-                </div>
+                <h2>{{$content->quoteh}}</h2>
+                <p>{{$content->quote}}</p>
+
             </div>
             <!-- .col-md-8 end -->
         </div>

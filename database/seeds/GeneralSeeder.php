@@ -2,6 +2,8 @@
 
 use App\Content;
 use App\GeneralSettings;
+use App\Offers;
+use App\Testimonial;
 use Illuminate\Database\Seeder;
 
 class GeneralSeeder extends Seeder
@@ -54,15 +56,53 @@ Disposant de plusieurs équipes spécialisées, nous sommes en mesure d’instal
 Disposant de nombreuses certifications, nous travaillons uniquement avec des marques de climatisations reconnues permettant un service optimale.
 Nos prestations globales pour tous les systèmes de génie climatique nous permettent de rester à la pointe de notre secteur afin de climatiser au mieux l’ensemble de vos locaux et Habitation. ',
             'values' => '(R)espect d’autrui
-(E)sprit d’équipe
-(S)atisfaction client
-(P)artage du savoir-faire
-(E)ngagement
-(C)confiance
-(T)ravail de qualité.',
+                        (E)sprit d’équipe
+                        (S)atisfaction client
+                        (P)artage du savoir-faire
+                        (E)ngagement
+                        (C)confiance
+                        (T)ravail de qualité.',
             'engagement' => 'HDNS Clim s’est attachée à conserver les valeurs qui ont animé sa création. Une charte d’engagement a été établie pour conduire chaque professionnel à s’impliquer de manière identique. ',
             'quoteh' => 'La qualité avant tout',
             'quote' => 'Le système de gestion de la qualité de la construction de pointe LATISTA garantit des normes de qualité élevées sur tous les sites de lentreprise. Le mécanisme de contrôle permet un suivi intégré des travaux à toutes les étapes de la construction et comprend plus de 100 références dévaluation de la qualité.'
+        ]);
+        Testimonial::create([
+            'name' => 'Begha',
+            'designation' => 'Director',
+            'review' => 'The company’s experts have accumulated valuable experience in green development, being savvy to all aspects of the certification process and requirements.'
+        ]);
+        Testimonial::create([
+            'name' => 'Begha',
+            'designation' => 'Director',
+            'review' => 'The company’s experts have accumulated valuable experience in green development, being savvy to all aspects of the certification process and requirements.'
+        ]);
+        Testimonial::create([
+            'name' => 'Begha',
+            'designation' => 'Director',
+            'review' => 'The company’s experts have accumulated valuable experience in green development, being savvy to all aspects of the certification process and requirements.'
+        ]);
+        Testimonial::create([
+            'name' => 'Begha',
+            'designation' => 'Director',
+            'review' => 'The company’s experts have accumulated valuable experience in green development, being savvy to all aspects of the certification process and requirements.'
+        ]);
+        Offers::create([
+            'title1' => 'Offer 1',
+            'image1' => 'front/assets/images/10.png',
+            'price1' => '599',
+            'valid1' => '2021-06-15T12:00:00+00:00',
+            'title2' => 'Offer 2',
+            'image2' => 'front/assets/images/10.png',
+            'price2' => '599',
+            'valid2' => '2021-06-15T12:00:00+00:00',
+            'title3' => 'Offer 3',
+            'image3' => 'front/assets/images/10.png',
+            'price3' => '599',
+            'valid3' => '2021-06-15T12:00:00+00:00',
+            'title4' => 'Offer 2',
+            'image4' => 'front/assets/images/10.png',
+            'price4' => '599',
+            'valid4' => '2021-06-15T12:00:00+00:00',
         ]);
     }
 }

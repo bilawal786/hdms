@@ -147,6 +147,7 @@
   });
 
   $('#reservationdatetime').datetimepicker({ icons: { time: 'far fa-clock' } });
+  $('#reservationdatetime1').datetimepicker({ icons: { time: 'far fa-clock' } });
 </script>
  <script>
      function goBack() {
@@ -157,6 +158,26 @@
      $(function () {
          // Summernote
          $('#summernote').summernote()
+
+         // CodeMirror
+         CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+             mode: "htmlmixed",
+             theme: "monokai"
+         });
+     })
+     $(function () {
+         // Summernote
+         $('#summernote1').summernote()
+
+         // CodeMirror
+         CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+             mode: "htmlmixed",
+             theme: "monokai"
+         });
+     })
+     $(function () {
+         // Summernote
+         $('#summernote2').summernote()
 
          // CodeMirror
          CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {

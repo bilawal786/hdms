@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Content;
 use App\GeneralSettings;
 use App\Http\Controllers\Controller;
+use App\Offers;
 use Illuminate\Http\Request;
 
 class GeneralSettingsController extends Controller
@@ -134,6 +135,80 @@ class GeneralSettingsController extends Controller
             $content->sv3 = 'video/' . $name;
         }
         $content->update();
+        $notification = array(
+            'messege' => 'Ajouté avec succès!',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
+    public function content(){
+        $content = Content::find(1);
+        return view('admin.generalsettings.content', compact('content'));
+    }
+    public function contentstore(Request $request){
+        $content = Content::find(1);
+        $content->about = $request->about;
+        $content->values = $request->values;
+        $content->engagement = $request->engagement;
+        $content->quoteh = $request->quoteh;
+        $content->quote = $request->quote;
+        $content->update();
+        $notification = array(
+            'messege' => 'Ajouté avec succès!',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
+    public function offers(){
+        $offers = Offers::find(1);
+        return view('admin.generalsettings.offers', compact('offers'));
+    }
+    public function offersstore(Request $request){
+        $offers = Offers::find(1);
+        $offers->title1 = $request->title1;
+        $offers->title2 = $request->title2;
+        $offers->title3 = $request->title3;
+        $offers->title4 = $request->title4;
+
+        $offers->price1 = $request->price1;
+        $offers->price2 = $request->price2;
+        $offers->price3 = $request->price3;
+        $offers->price4 = $request->price4;
+
+        $offers->valid1 = $request->valid1;
+        $offers->valid2 = $request->valid2;
+        $offers->valid3 = $request->valid3;
+        $offers->valid4 = $request->valid4;
+
+        if ($request->hasfile('image1')) {
+            $image1 = $request->file('image1');
+            $name = time() . 'offers' . '.' . $image1->getClientOriginalExtension();
+            $destinationPath = 'offers/';
+            $image1->move($destinationPath, $name);
+            $offers->image1 = 'offers/' . $name;
+        }
+        if ($request->hasfile('image2')) {
+            $image2 = $request->file('image2');
+            $name = time() . 'offers' . '.' . $image2->getClientOriginalExtension();
+            $destinationPath = 'offers/';
+            $image2->move($destinationPath, $name);
+            $offers->image2 = 'offers/' . $name;
+        }
+        if ($request->hasfile('image3')) {
+            $image3 = $request->file('image3');
+            $name = time() . 'offers' . '.' . $image3->getClientOriginalExtension();
+            $destinationPath = 'offers/';
+            $image3->move($destinationPath, $name);
+            $offers->image3 = 'offers/' . $name;
+        }
+        if ($request->hasfile('image4')) {
+            $image4 = $request->file('image4');
+            $name = time() . 'offers' . '.' . $image4->getClientOriginalExtension();
+            $destinationPath = 'offers/';
+            $image4->move($destinationPath, $name);
+            $offers->image4 = 'offers/' . $name;
+        }
+        $offers->update();
         $notification = array(
             'messege' => 'Ajouté avec succès!',
             'alert-type' => 'success'
