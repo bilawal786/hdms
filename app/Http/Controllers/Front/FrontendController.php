@@ -6,6 +6,7 @@ use App\Content;
 use App\GeneralSettings;
 use App\Http\Controllers\Controller;
 use App\Offers;
+use App\Query;
 use App\Testimonial;
 use Illuminate\Http\Request;
 
@@ -17,5 +18,18 @@ class FrontendController extends Controller
         $testimonials = Testimonial::all();
         $offers = Offers::find(1);
         return view('front.index', compact('gs', 'content', 'testimonials', 'offers'));
+    }
+    public function query(Request $request){
+        $query = new Query();
+        $query->name = $request->name;
+        $query->email = $request->email;
+        $query->phone = $request->phone;
+        $query->service = $request->service;
+        $query->message = $request->message;
+        $notification = array(
+            'messege' => 'Votre requête est soumise avec succès!',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
     }
 }

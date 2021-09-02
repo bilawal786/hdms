@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'Front\FrontendController@index')->name('front.index');
+Route::post('front/query', 'Front\FrontendController@query')->name('front.query');
 
 Auth::routes();
 
