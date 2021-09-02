@@ -174,5 +174,8 @@
         .mdn{
             display: none;
         }
+        .modal-dialog {
+            width: 100% !important;
+        }
     }
 </style>
