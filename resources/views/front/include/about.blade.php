@@ -6,7 +6,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-6">
                         <div class="heading heading-4">
                             <div class="heading-bg heading-right">
-                                <p class="mb-0">Fonctionnalités impressionnantes</p>
+                                <p class="mb-0">HDMS CLIM</p>
                                 <h2>Pourquoi nous choisir</h2>
                             </div>
                         </div>

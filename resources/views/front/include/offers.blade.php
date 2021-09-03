@@ -23,7 +23,8 @@
                         </div>
                     </div>
                 </div>
-                <button data-toggle="modal" data-target="#model-quote" class="btn btn-primary pb-20">Acheter maintenant </button>
+                <input type="hidden" class="offerprice1" value="{{$offers->price1}}">
+                <button data-toggle="modal" data-target="#model-quote" class="btn btn-primary pb-20 offer1">Acheter maintenant</button>
             </div>
             <div class="col-md-4 mdn">
                 <img class="w100" style="margin-top: 200px; margin-bottom: -100px" src="{{asset('front/assets/images/11.jpeg')}}" alt="">
@@ -50,7 +51,8 @@
                         </div>
                     </div>
                 </div>
-                <button data-toggle="modal" data-target="#model-quote" class="btn btn-primary pb-20">Acheter maintenant</button>
+                <input type="hidden" class="offerprice2" value="{{$offers->price2}}">
+                <button data-toggle="modal" data-target="#model-quote" class="btn btn-primary pb-20 offer2">Acheter maintenant</button>
             </div>
         </div>
         <div class="row">
@@ -76,7 +78,8 @@
                         </div>
                     </div>
                 </div>
-                <button data-toggle="modal" data-target="#model-quote" class="btn btn-primary pb-20">Acheter maintenant </button>
+                <input type="hidden" class="offerprice3" value="{{$offers->price3}}">
+                <button data-toggle="modal" data-target="#model-quote" class="btn btn-primary pb-20 offer3">Acheter maintenant </button>
             </div>
             <div class="col-md-4">
 
@@ -103,7 +106,8 @@
                         </div>
                     </div>
                 </div>
-                <button data-toggle="modal" data-target="#model-quote" class="btn btn-primary pb-20">Acheter maintenant</button>
+                <input type="hidden" class="offerprice4" value="{{$offers->price4}}">
+                <button data-toggle="modal" data-target="#model-quote" class="btn btn-primary pb-20 offer4">Acheter maintenant</button>
             </div>
         </div>
     </div>

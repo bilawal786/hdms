@@ -103,6 +103,35 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-ellipsis-h"></i>
+                        <p>
+                            Requêtes
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('queries.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Nouvelles requêtes </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Traitement des devis</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Devis complets</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
 
             @else

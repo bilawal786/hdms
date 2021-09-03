@@ -26,6 +26,16 @@ class FrontendController extends Controller
         $query->phone = $request->phone;
         $query->service = $request->service;
         $query->message = $request->message;
+        $query->quantity = $request->quantity;
+        $query->price = $request->price;
+        if($request->installed){
+            foreach($request->installed as $size)
+            {
+                $data[] = $size;
+                $query->installed = json_encode($data);
+            }
+        }
+        $query->save();
         $notification = array(
             'messege' => 'Votre requête est soumise avec succès!',
             'alert-type' => 'success'

@@ -224,5 +224,34 @@
             }, 0);
         });
     }
-
+</script>
+<script>
+    $(document).ready(function(){
+        $(".ac").keyup(function(){
+            $(".values").empty();
+            var length = this.value;
+            for (let i = 0; i < length; i++) {
+                $(".values").append( "<input style='border-bottom: 2px solid #0727f7;' type=\"text\" class=\"form-control ac\" name=\"installed[]\" placeholder=\"Où est-il installé ?\" required/>" );
+            }
+        });
+        $(".offer1").click(function(){
+            var price1 =  $(".offerprice1").val();
+            $(".offerprice").val(price1);
+        });
+        $(".offer2").click(function(){
+            var price2 =  $(".offerprice2").val();
+            $(".offerprice").val(price2);
+        });
+        $(".offer3").click(function(){
+            var price3 =  $(".offerprice3").val();
+            $(".offerprice").val(price3);
+        });
+        $(".offer4").click(function(){
+            var price4 =  $(".offerprice4").val();
+            $(".offerprice").val(price4);
+        });
+        $(".directquery").click(function(){
+            $(".offerprice").val(0);
+        });
+    });
 </script>

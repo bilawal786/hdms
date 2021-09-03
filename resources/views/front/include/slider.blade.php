@@ -55,7 +55,7 @@
                     <!-- .widget end -->
 
                     <li class="col-sm-4 col-md-3 widget">
-                        <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#model-quote" id="modelquote">Demander un devis</a>
+                        <a class="btn btn-primary directquery" href="#" data-toggle="modal" data-target="#model-quote" id="modelquote">Demander un devis</a>
 
                         <!-- Modal -->
                         <div class="modal fade model-quote" id="model-quote" tabindex="-1" role="dialog" aria-labelledby="modelquote">
@@ -128,23 +128,7 @@
                                                                                         <span class="step"></span>
                                                                                     </div>
                                                                                 </form>-->
-                                        <form action="{{route('front.query')}}" method="post">
-                                            @csrf
-                                            <input type="text" class="form-control" name="name" id="name" placeholder="Votre Nam" required/>
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email" required/>
-                                            <input type="text" class="form-control" name="phone" id="telephone" placeholder="Telephone" required/>
-                                            <select class="form-control" name="service" id="">
-                                                <option>Sélectionnez le service</option>
-                                                <option value="INSTALLATION">INSTALLATION</option>
-                                                <option value="ENTRETIEN">ENTRETIEN</option>
-                                                <option value="MAINTENANCE / DEPANNAGE / DIAGNOSTICS">MAINTENANCE / DEPANNAGE / DIAGNOSTICS</option>
-                                            </select>
-                                            <textarea class="form-control" name="message"  id="quote" placeholder="Détails du devis" rows="2" required></textarea>
-                                            <button type="submit" class="btn btn-primary btn-black btn-block">Soumettre la requête</button>
-                                            <!--Alert Message-->
-                                            <div id="pop-quote-result" class="mt-xs">
-                                            </div>
-                                        </form>
+                                        @include('front.include.queryform')
                                     </div>
                                     <!-- .model-body end -->
                                 </div>

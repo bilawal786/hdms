@@ -26,5 +26,9 @@ Route::get('/temoignage/index', 'Admin\TestimonialController@index')->name('test
 Route::post('/temoignage/store', 'Admin\TestimonialController@store')->name('testimonial.store');
 Route::get('/temoignage/delete/{id}', 'Admin\TestimonialController@delete')->name('testimonial.delete');
 
+Route::get('/queries/index', 'Admin\QueriesController@index')->name('queries.index');
+Route::get('/queries/view/{id}', 'Admin\QueriesController@view')->name('queries.view');
+Route::get('/queries/status/{id}/{status}', 'Admin\QueriesController@status')->name('query.status');
+
 
 });

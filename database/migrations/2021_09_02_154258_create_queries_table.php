@@ -20,6 +20,9 @@ class CreateQueriesTable extends Migration
             $table->string('phone');
             $table->string('service');
             $table->string('message');
+            $table->string('quantity');
+            $table->string('price');
+            $table->longText('installed');
             $table->integer('status')->default(0);
             $table->timestamps();
         });
