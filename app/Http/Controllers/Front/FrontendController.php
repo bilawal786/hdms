@@ -42,4 +42,7 @@ class FrontendController extends Controller
         );
         return redirect()->back()->with($notification);
     }
+    public function payment(){
+        dd("work in progress");
+    }
 }

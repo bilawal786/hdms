@@ -119,34 +119,75 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="{{route('queries.processing')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Traitement des devis</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="{{route('queries.complete')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Devis complets</p>
                             </a>
                         </li>
                     </ul>
                 </li>
-
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-ellipsis-h"></i>
+                        <p>
+                            Paiements
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('customers.payments')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Liens de paiement </p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-ellipsis-h"></i>
+                        <p>
+                            Les clients
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('customers.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Tous les clients </p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
             @else
 
-
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-ellipsis-h"></i>
+                        <p>
+                            Requêtes
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('user.queries')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Mes Requêtes </p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             @endif
 
-  {{--          <li class="nav-item">
-                <a href="{{route('profile')}}" class="nav-link">
-                    <i class="nav-icon fas fa-user"></i>
-                    <p>
-                        Mettre à jour le profil
-                    </p>
-                </a>
-            </li>
             <li class="nav-item">
                 <a href="{{route('change.password')}}" class="nav-link">
                     <i class="nav-icon fas fa-key"></i>
@@ -154,7 +195,7 @@
                         Changer le mot de passe
                     </p>
                 </a>
-            </li>--}}
+            </li>
 
            <li class="nav-item">
             <a href="{{route('logout')}}" onclick="event.preventDefault();

@@ -91,64 +91,9 @@
                             <!-- small box -->
                             <div class="small-box bg-primary">
                                 <div class="inner">
-                                    <h3>{{$userappointments->count()}}</h3>
+                                    <h3>1</h3>
 
-                                    <p>Mes rendez-vous</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fa fa-folder-plus"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-success">
-                                <div class="inner">
-                                    <h3>{{$todayuserappointments->count()}}</h3>
-
-                                    <p>Rendez-vous aujourd'hui</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fa fa-folder-plus"></i>
-                                </div>
-                            </div>
-                        </div>
-                        @if($useractivesubscriptions)
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-danger">
-                                <div class="inner">
-                                    <h3>{{$useractivesubscriptions->subscription->title}}</h3>
-
-                                    <p>Abonnement actif</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fa fa-folder-plus"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-warning">
-                                <div class="inner">
-                                    <h3>{{$useractivesubscriptions->remaining}}</h3>
-
-                                    <p>Lavages restants</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fa fa-folder-plus"></i>
-                                </div>
-                            </div>
-                        </div>
-                            @endif
-
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-dark">
-                                <div class="inner">
-                                    <h3>{{$userinvoices->count()}}</h3>
-
-                                    <p>Total des factures</p>
+                                    <p>Mes requêtes</p>
                                 </div>
                                 <div class="icon">
                                     <i class="fa fa-folder-plus"></i>

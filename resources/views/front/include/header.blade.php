@@ -82,6 +82,16 @@
                         <li>
                             <a href="#clients">Clients</a>
                         </li>
+                        @guest
+                        <li>
+                            <a href="{{route('login')}}">Connexion</a>
+                        </li>
+                        @endguest
+                        @auth
+                            <li>
+                                <a href="{{route('home')}}">Connexion</a>
+                            </li>
+                        @endauth
                         <!-- li end -->
                     </ul>
 

@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="">Vidéo</label>
-                                    <input type="file" name="sv1" accept="video/*" class="form-control">
+                                    <input type="text" name="sv1" {{$content->sv1}} class="form-control" required>
                                 </div>
                             </div>
                             <hr>
@@ -77,7 +77,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="">Vidéo</label>
-                                    <input type="file" name="sv2" accept="video/*" class="form-control">
+                                    <input type="text" name="sv2" {{$content->sv2}} class="form-control" required>
                                 </div>
                             </div>
                             <hr>
@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="">Vidéo</label>
-                                    <input type="file" name="sv3" accept="video/*" class="form-control">
+                                    <input type="text" name="sv3" {{$content->sv3}} class="form-control" required>
                                 </div>
                             </div>
 

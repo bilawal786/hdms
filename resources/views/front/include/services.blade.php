@@ -13,10 +13,8 @@
                             <div class="service-desc">
                                 <h4 class="h50">{{{$content->sh1}}}</h4>
                                 <p class="h110">{{$content->sd1}}</p>
-                                <video width="100%" controls>
-                                    <source src="{{asset($content->sv1)}}" type="video/mp4">
-                                    Your browser does not support HTML video.
-                                </video>
+                                <iframe id="video" width="100%" height="200" src="https://www.youtube.com/embed/{{$content->sv1}}">
+                                </iframe>
                             </div>
                         </div>
                     </div>
@@ -32,10 +30,8 @@
                             <div class="service-desc">
                                 <h4 class="h50">{{$content->sh2}}</h4>
                                 <p class="h110">{{$content->sd2}}</p>
-                                <video width="100%" controls>
-                                    <source src="{{$content->sv2}}" type="video/mp4">
-                                    Your browser does not support HTML video.
-                                </video>
+                                <iframe id="video" width="100%" height="200" src="https://www.youtube.com/embed/{{$content->sv2}}">
+                                </iframe>
                             </div>
                         </div>
                     </div>
@@ -51,10 +47,8 @@
                             <div class="service-desc">
                                 <h4 class="h50">{{$content->sh3}}</h4>
                                 <p class="h110">{{$content->sd3}}</p>
-                                <video width="100%" controls>
-                                    <source src="{{$content->sv3}}" type="video/mp4">
-                                    Your browser does not support HTML video.
-                                </video>
+                                <iframe id="video" width="100%" height="200" src="https://www.youtube.com/embed/{{$content->sv3}}">
+                                </iframe>
                             </div>
                         </div>
                     </div>

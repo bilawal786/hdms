@@ -46,9 +46,9 @@ class GeneralSeeder extends Seeder
             'sd2' => 'Tiling is an effective way to add elegance & style to any bath or kitchen Yellow Hats Remodeling specializes in tile installation and works directly with each homeowner.',
             'sd3' => 'Tiling is an effective way to add elegance & style to any bath or kitchen Yellow Hats Remodeling specializes in tile installation and works directly with each homeowner.',
 
-            'sv1' => 'https://www.w3schools.com/html/mov_bbb.mp4',
-            'sv2' => 'https://www.w3schools.com/html/mov_bbb.mp4',
-            'sv3' => 'https://www.w3schools.com/html/mov_bbb.mp4',
+            'sv1' => 'tgbNymZ7vqY',
+            'sv2' => 'tgbNymZ7vqY',
+            'sv3' => 'tgbNymZ7vqY',
 
             'about' => 'HDMS Clim, est à votre service pour l’achat, la pose, la maintenance le diagnostic et le dépannage de votre climatisation.
 Nos équipes sont à votre disposition pour répondre à toutes vos problématiques concernant la climatisation que vous soyez particuliers ou professionnels.

@@ -231,7 +231,7 @@
             $(".values").empty();
             var length = this.value;
             for (let i = 0; i < length; i++) {
-                $(".values").append( "<input style='border-bottom: 2px solid #0727f7;' type=\"text\" class=\"form-control ac\" name=\"installed[]\" placeholder=\"Où est-il installé ?\" required/>" );
+                $(".values").append( "<input style='border-bottom: 2px solid #0727f7;' type=\"text\" class=\"form-control ac\" name=\"installed[]\" placeholder=\"Dans quel pièce souhaitez-vous l’installer\" required/>" );
             }
         });
         $(".offer1").click(function(){

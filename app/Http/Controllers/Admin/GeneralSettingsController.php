@@ -6,7 +6,10 @@ use App\Content;
 use App\GeneralSettings;
 use App\Http\Controllers\Controller;
 use App\Offers;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class GeneralSettingsController extends Controller
 {
@@ -175,10 +178,18 @@ class GeneralSettingsController extends Controller
         $offers->price3 = $request->price3;
         $offers->price4 = $request->price4;
 
-        $offers->valid1 = $request->valid1;
-        $offers->valid2 = $request->valid2;
-        $offers->valid3 = $request->valid3;
-        $offers->valid4 = $request->valid4;
+        if ($request->valid1){
+            $offers->valid1 = $request->valid1;
+        }
+        if ($request->valid2){
+            $offers->valid2 = $request->valid2;
+        }
+        if ($request->valid3){
+            $offers->valid3 = $request->valid3;
+        }
+        if ($request->valid4){
+            $offers->valid4 = $request->valid4;
+        }
 
         if ($request->hasfile('image1')) {
             $image1 = $request->file('image1');
@@ -214,5 +225,42 @@ class GeneralSettingsController extends Controller
             'alert-type' => 'success'
         );
         return redirect()->back()->with($notification);
+    }
+    public function password_change() {
+        return view ('admin.generalsettings.updatepassword');
+    }
+
+    public function password_update(Request $request)
+    {
+        $password=Auth::user()->password;
+        $oldpass=$request->oldpass;
+        $newpass=$request->password;
+        $confirm=$request->password_confirmation;
+        if (Hash::check($oldpass,$password)) {
+            if ($newpass === $confirm) {
+                $user=User::find(Auth::id());
+                $user->password=Hash::make($request->password);
+                $user->save();
+                Auth::logout();
+                $notification=array(
+                    'messege'=>'Le mot de passe a été changé avec succès ! Connectez-vous maintenant avec votre nouveau mot de passe',
+                    'alert-type'=>'success'
+                );
+                return Redirect()->route('login')->with($notification);
+            }else{
+                $notification=array(
+                    'messege'=>'Le nouveau mot de passe et la confirmation du mot de passe ne correspondent pas!',
+                    'alert-type'=>'error'
+                );
+                return Redirect()->back()->with($notification);
+            }
+        }else{
+            $notification=array(
+                'messege'=>'Lancien mot de passe ne correspond pas!',
+                'alert-type'=>'error'
+            );
+            return Redirect()->back()->with($notification);
+        }
+
     }
 }

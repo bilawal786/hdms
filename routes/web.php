@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'Front\FrontendController@index')->name('front.index');
+Route::get('/payment/{link}', 'Front\FrontendController@payment')->name('front.payment');
 Route::post('front/query', 'Front\FrontendController@query')->name('front.query');
 
 Auth::routes();
@@ -29,6 +30,25 @@ Route::get('/temoignage/delete/{id}', 'Admin\TestimonialController@delete')->nam
 Route::get('/queries/index', 'Admin\QueriesController@index')->name('queries.index');
 Route::get('/queries/view/{id}', 'Admin\QueriesController@view')->name('queries.view');
 Route::get('/queries/status/{id}/{status}', 'Admin\QueriesController@status')->name('query.status');
+Route::get('/queries/processing', 'Admin\QueriesController@processing')->name('queries.processing');
+Route::get('/queries/complete', 'Admin\QueriesController@complete')->name('queries.complete');
+Route::post('/payment/link/store', 'Admin\QueriesController@paymentLink')->name('payment.store');
 
+Route::post('/customer/store', 'Admin\QueriesController@customerStore')->name('customer.store');
+Route::get('customers/index', 'Admin\CustomerController@index')->name('customers.index');
+Route::get('customers/orders/{id}', 'Admin\CustomerController@orders')->name('customer.orders');
+Route::get('customers/edit/{id}', 'Admin\CustomerController@edit')->name('customer.edit');
+Route::post('customers/update/{id}', 'Admin\CustomerController@update')->name('customer.update');
+Route::get('customers/payments', 'Admin\CustomerController@payments')->name('customers.payments');
 
+Route::get('user/queries', 'UserController@queries')->name('user.queries');
+
+Route::get('/update-Password', [
+    'uses' => 'Admin\GeneralSettingsController@password_change',
+    'as' => 'change.password'
+]);
+Route::post('/update-password/store', [
+    'uses' => 'Admin\GeneralSettingsController@password_update',
+    'as' => 'update.password'
+]);
 });
