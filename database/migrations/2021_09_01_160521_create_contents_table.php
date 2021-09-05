@@ -31,9 +31,9 @@ class CreateContentsTable extends Migration
             $table->longText('sd2');
             $table->longText('sd3');
 
-            $table->string('sv1');
-            $table->string('sv2');
-            $table->string('sv3');
+            $table->string('sv1')->nullable();
+            $table->string('sv2')->nullable();
+            $table->string('sv3')->nullable();
 
             $table->longText('about');
             $table->longText('values');

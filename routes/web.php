@@ -3,15 +3,17 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'Front\FrontendController@index')->name('front.index');
-Route::get('/payment/{link}', 'Front\FrontendController@payment')->name('front.payment');
 Route::post('front/query', 'Front\FrontendController@query')->name('front.query');
+Route::get('user/login', 'Front\FrontendController@userLogin')->name('user.login');
+Route::get('/payment/{link}', 'Front\FrontendController@paymentLink')->name('front.payment');
+Route::get('/payment/success/{id}', 'Front\FrontendController@paymentSuccess')->name('payment.success');
 
 Auth::routes();
 
+
+Route::group(['middleware' => ['auth', 'web', 'role']], function() {
+
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::group(['middleware' => ['auth', 'web']], function() {
-
 Route::get('/general/settings', 'Admin\GeneralSettingsController@index')->name('general.settings');
 Route::post('/general/settings/store', 'Admin\GeneralSettingsController@store')->name('general.store');
 Route::get('/general/slider', 'Admin\GeneralSettingsController@slider')->name('general.slider');
@@ -30,6 +32,7 @@ Route::get('/temoignage/delete/{id}', 'Admin\TestimonialController@delete')->nam
 Route::get('/queries/index', 'Admin\QueriesController@index')->name('queries.index');
 Route::get('/queries/view/{id}', 'Admin\QueriesController@view')->name('queries.view');
 Route::get('/queries/status/{id}/{status}', 'Admin\QueriesController@status')->name('query.status');
+Route::post('/queries/update/{id}', 'Admin\QueriesController@update')->name('query.update');
 Route::get('/queries/processing', 'Admin\QueriesController@processing')->name('queries.processing');
 Route::get('/queries/complete', 'Admin\QueriesController@complete')->name('queries.complete');
 Route::post('/payment/link/store', 'Admin\QueriesController@paymentLink')->name('payment.store');
@@ -41,7 +44,6 @@ Route::get('customers/edit/{id}', 'Admin\CustomerController@edit')->name('custom
 Route::post('customers/update/{id}', 'Admin\CustomerController@update')->name('customer.update');
 Route::get('customers/payments', 'Admin\CustomerController@payments')->name('customers.payments');
 
-Route::get('user/queries', 'UserController@queries')->name('user.queries');
 
 Route::get('/update-Password', [
     'uses' => 'Admin\GeneralSettingsController@password_change',
@@ -51,4 +53,12 @@ Route::post('/update-password/store', [
     'uses' => 'Admin\GeneralSettingsController@password_update',
     'as' => 'update.password'
 ]);
+});
+
+Route::group(['middleware' => ['auth', 'web']], function() {
+
+Route::get('user/queries', 'UserController@queries')->name('user.queries');
+Route::get('user/queries/view/{id}', 'UserController@queryView')->name('user.queries.view');
+Route::get('user/dashboard', 'UserController@dashboard')->name('user.dashboard');
+
 });

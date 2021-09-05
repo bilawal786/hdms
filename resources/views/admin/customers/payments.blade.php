@@ -40,6 +40,7 @@
                                         <th>Client Téléphone</th>
                                         <th>Relier</th>
                                         <th>En rapport</th>
+                                        <th>Taper</th>
                                         <th>Prix</th>
                                         <th>Statut</th>
                                     </tr>
@@ -53,6 +54,13 @@
                                             <td>{{URL::to('/').'/payment/'.$row->link}}</td>
                                             <td>
                                                 <a href="{{route('queries.view' , ['id'=>$row->q_id])}}">Aller à la requête</a>
+                                            </td>
+                                            <td>
+                                                @if($row->type == "installment")
+                                                    <span class="badge badge-danger">Versements</span>
+                                                @else
+                                                    <span class="badge badge-success">Une fois</span>
+                                                @endif
                                             </td>
                                             <td>{{$row->price}} €</td>
                                             <td>

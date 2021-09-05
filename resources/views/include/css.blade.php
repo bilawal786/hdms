@@ -177,5 +177,57 @@
         .modal-dialog {
             width: 100% !important;
         }
+        .tab {
+            width: 100% !important;
+        }
+        .tabcontent {
+            width: 100% !important;
+        }
+    }
+    /* Style the tab */
+    .tab {
+        float: left;
+        border: 1px solid #ccc;
+        background-color: #4169e1;
+        width: 20%;
+        height: 300px;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        display: block;
+        background-color: inherit;
+        color: white;
+        padding: 12px 16px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #141d40;
+    }
+
+    /* Create an active/current "tab button" class */
+    .tab button.active {
+        background-color: #141d40;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        float: left;
+        padding: 0px 12px;
+        border: 1px solid #ccc;
+        width: 80%;
+        border-left: none;
+        height: 300px;
+    }
+    .callout{
+        padding: 20px
     }
 </style>

@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="">Vidéo</label>
-                                    <input type="text" name="sv1" {{$content->sv1}} class="form-control" required>
+                                    <input type="text" name="sv1" value="{{$content->sv1}}"  class="form-control">
                                 </div>
                             </div>
                             <hr>
@@ -77,7 +77,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="">Vidéo</label>
-                                    <input type="text" name="sv2" {{$content->sv2}} class="form-control" required>
+                                    <input type="text" name="sv2" value="{{$content->sv2}}"  class="form-control">
                                 </div>
                             </div>
                             <hr>
@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="">Vidéo</label>
-                                    <input type="text" name="sv3" {{$content->sv3}} class="form-control" required>
+                                    <input type="text" name="sv3" value="{{$content->sv3}}"  class="form-control">
                                 </div>
                             </div>
 

@@ -85,7 +85,7 @@
                            </div>
                            <hr>
                            <div class="col-md-3">
-                               <b>Price:</b>
+                               <b>Prix:</b>
                            </div>
                            <div class="col-md-3">
                                @if($query->price == 0)
@@ -113,30 +113,58 @@
                                <b>Statut de paiement:</b>
                            </div>
                            <div class="col-md-3">
-                               <span class="badge badge-danger">Non payée</span>
+                               @if($query->paymentstatus == 1)
+                                   <span class="badge badge-success">payée</span>
+                               @else
+                                   <span class="badge badge-danger">Non payée</span>
+                               @endif
+                           </div>
+                           <hr>
+                           <div class="col-md-3">
+                               <b>DATE DE POSE:</b>
+                           </div>
+                           <div class="col-md-3">
+                               {{$query->created_at}}
                            </div>
                        </div>
                         <hr>
+                        <form action="{{route('query.update', ['id' => $query->id])}}" method="POST">
+                            @csrf
                         <div class="row">
                             @if(Auth::user()->role ==1)
                                 <div class="col-md-3">
-                                    <b>Planifier la prochaine maintenance:</b>
+                                    <b>DATE D'ENTRETIEN:</b>
                                 </div>
-                                <div class="col-md-2">
-                                    <input type="date" class="form-control">
+                                <div class="col-md-3">
+                                    <input type="date" value="{{$query->service_date}}" name="service_date" class="form-control">
                                 </div>
-                                <div class="col-md-1">
-                                    <button class="btn btn-primary btn-sm">Ajouter</button>
+                                <div class="col-md-3">
+                                    <b>CLIMATISEUR Marque:</b>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" value="{{$query->mark}}" name="mark" class="form-control">
+                                </div>
+                                <hr>
+                                <div class="col-md-3">
+                                    <b>LIEUX:</b>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text"  value="{{$query->place}}" name="place" class="form-control">
+                                </div>
+                                <div class="col-md-3">
+                                    <b>PROCHAIN ENTRETIEN:</b>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="date" value="{{$query->next_maintain}}" name="next_maintain" class="form-control">
+                                </div>
+                                <div class="col-md-3 col-md-offset-3">
+                                    <button type="submit" class="btn btn-primary btn-sm">Sauvegarder</button>
                                 </div>
                             @else
-                                <div class="col-md-3">
-                                    <b>Maintenance suivante:</b>
-                                </div>
-                                <div class="col-md-3">
-                                    12-09-2022
-                                </div>
+
                             @endif
                         </div>
+                        </form>
                      </div>
 
                 </div><!-- /.col -->

@@ -94,6 +94,10 @@ class GeneralSettingsController extends Controller
         $content->sd2 = $request->sd2;
         $content->sd3 = $request->sd3;
 
+        $content->sv1 = $request->sv1;
+        $content->sv2 = $request->sv2;
+        $content->sv3 = $request->sv3;
+
         if ($request->hasfile('simage1')) {
             $image1 = $request->file('simage1');
             $name = time() . 'service' . '.' . $image1->getClientOriginalExtension();
@@ -116,7 +120,7 @@ class GeneralSettingsController extends Controller
             $content->simage3 = 'service/' . $name;
         }
 
-        if ($request->hasfile('sv1')) {
+      /*  if ($request->hasfile('sv1')) {
             $video1 = $request->file('sv1');
             $name = time() . 'video' . '.' . $video1->getClientOriginalExtension();
             $destinationPath = 'video/';
@@ -136,7 +140,7 @@ class GeneralSettingsController extends Controller
             $destinationPath = 'video/';
             $video3->move($destinationPath, $name);
             $content->sv3 = 'video/' . $name;
-        }
+        }*/
         $content->update();
         $notification = array(
             'messege' => 'Ajouté avec succès!',

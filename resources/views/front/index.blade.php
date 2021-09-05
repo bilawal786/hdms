@@ -1,4 +1,5 @@
-@include('front.include.header')
+@extends('layouts.front')
+@section('content')
 <!-- Hero Section
 ============================================= -->
 @include('front.include.slider')
@@ -49,6 +50,4 @@
 
 <!-- #clients end-->
 
-<!-- Call To Action #1
-============================================= -->
-@include('front.include.footer')
+@endsection

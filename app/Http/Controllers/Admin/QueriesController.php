@@ -75,4 +75,17 @@ class QueriesController extends Controller
         );
         return redirect()->back()->with($notification);
     }
+    public function update(Request $request, $id){
+        $query = Query::find($id);
+        $query->service_date = $request->service_date;
+        $query->mark = $request->mark;
+        $query->place = $request->place;
+        $query->next_maintain = $request->next_maintain;
+        $query->update();
+        $notification = array(
+            'messege' => 'Ajouté avec succès!',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
 }

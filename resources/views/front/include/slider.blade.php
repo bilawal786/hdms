@@ -77,57 +77,6 @@
                                     </div>
                                     <!-- .model-header end -->
                                     <div class="modal-body">
-                                        <!--                                        <p style="text-align: center">
-                                                                                   <b> Devis climatisation : faites une demande de devis (gratuit et rapide)</b>
-                                                                                    <br>
-                                                                                    Vous voulez refroidir une ou plusieurs pièces de votre habitation et améliorer votre confort de vie à la maison ? Vous souhaitez savoir à quel prix faire installer une climatisation ? HDMS CLIM est le service de référence pour faire installer une climatisation facilement et rapidement chez vous.
-                                                                                </p>-->
-
-                                        <!--                                        <form id="regForm" action="/action_page.php">
-                                                                                    &lt;!&ndash; One "tab" for each step in the form: &ndash;&gt;
-                                                                                    <div class="tab">
-                                                                                        <p><input type="number" class="form-control" placeholder="Quel est votre code postal ?" name="postal"></p>
-                                                                                    </div>
-                                                                                    <div class="tab">
-                                                                                        <h3>Quel type d'intervention souhaitez?</h3>
-                                                                                        <p><input type="radio"  name="type" >  Installation d'une seule climatisation</p>
-                                                                                        <p><input type="radio"  name="type">  Installation de plusieurs climatisations</p>
-                                                                                        <p><input type="radio" name="type">   Entretien et réparation</p>
-                                                                                    </div>
-                                                                                    <div class="tab">
-                                                                                        <h3>Quel est le lieu de l'Intervention ?</h3>
-                                                                                        <p><input type="radio"  name="place" > Maison</p>
-                                                                                        <p><input type="radio"  name="place"> Appartement</p>
-                                                                                        <p><input type="radio" name="place"> Immeuble</p>
-                                                                                        <p><input type="radio" name="place"> Magasin</p>
-                                                                                        <p><input type="radio" name="place"> Autre</p>
-                                                                                    </div>
-                                                                                    <div class="tab">
-                                                                                        <h3>Combien de pièces souhaitez-vous climatiser ?</h3>
-                                                                                        <p><input type="radio"  name="piece" > 1 pièce</p>
-                                                                                        <p><input type="radio"  name="piece"> 2 pièces</p>
-                                                                                        <p><input type="radio" name="piece"> 3 pièces</p>
-                                                                                        <p><input type="radio" name="piece"> 4 pièces</p>
-                                                                                        <p><input type="radio" name="piece"> 5 pièces</p>
-                                                                                    </div>
-                                                                                    <div class="tab">
-                                                                                        <h3>Quelle est la surface à climatiser ?</h3>
-                                                                                        <p><input class="form-control" placeholder="Username..." name="uname">m</p>
-                                                                                    </div>
-                                                                                    <div>
-                                                                                        <div>
-                                                                                            <button type="button" class="btn btn-primary" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                                                                                            <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)">Next</button>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    &lt;!&ndash; Circles which indicates the steps of the form: &ndash;&gt;
-                                                                                    <div style="text-align:center;margin-top:40px;">
-                                                                                        <span class="step"></span>
-                                                                                        <span class="step"></span>
-                                                                                        <span class="step"></span>
-                                                                                        <span class="step"></span>
-                                                                                    </div>
-                                                                                </form>-->
                                         @include('front.include.queryform')
                                     </div>
                                     <!-- .model-body end -->

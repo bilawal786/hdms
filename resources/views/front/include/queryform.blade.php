@@ -3,7 +3,8 @@
     <input type="text" class="form-control" name="name" id="name" placeholder="Votre Nom" required/>
     <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email" required/>
     <input type="text" class="form-control" name="phone" id="telephone" placeholder="Téléphone" required/>
-    <input type="text" class="form-control ac" name="quantity" placeholder="Combien de climatiseurs souhaitez-vous ?" required/>
+{{--    <input type="text" class="form-control ac" name="quantity" placeholder="Combien de climatiseurs souhaitez-vous ?" required/>--}}
+    <input type="text" name="installed[]" class="form-control" placeholder="Dans quel pièce souhaitez-vous l’installer" required>
     <input type="hidden" name="price" value="" class="offerprice">
     <div class="values"></div>
     <select class="form-control" name="service" id="">
