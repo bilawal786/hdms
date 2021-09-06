@@ -230,4 +230,8 @@
     .callout{
         padding: 20px
     }
+    .projects-filter ul li a:hover, .projects-filter ul li a.active-filter {
+        color: #4169e1 !important;
+        border-bottom: 2px solid #4169e1 !important;
+    }
 </style>

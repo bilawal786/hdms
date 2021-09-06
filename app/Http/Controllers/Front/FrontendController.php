@@ -31,7 +31,7 @@ class FrontendController extends Controller
         $query->phone = $request->phone;
         $query->service = $request->service;
         $query->message = $request->message;
-        $query->quantity = $request->quantity;
+        $query->quantity = "1";
         $query->price = $request->price;
         if($request->installed){
             foreach($request->installed as $size)

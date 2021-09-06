@@ -267,4 +267,48 @@ class GeneralSettingsController extends Controller
         }
 
     }
+    public function gallery(){
+        $content = Content::find(1);
+        return view('admin.generalsettings.gallery', compact('content'));
+    }
+    public function gallerystore(Request $request){
+        $content = Content::find(1);
+
+        if($request->hasfile('equip')){
+            foreach($request->file('equip') as $image)
+            {
+                $name = time().'gallery'.'.'.$image->getClientOriginalName();
+                $destinationPath ='gallery/';
+                $image->move($destinationPath, $name);
+                $data[] = $name;
+                $content->equip=json_encode($data);
+            }
+        }
+        if($request->hasfile('interv')){
+            foreach($request->file('interv') as $image1)
+            {
+                $name1 = time().'gallery'.'.'.$image1->getClientOriginalName();
+                $destinationPath ='gallery/';
+                $image1->move($destinationPath, $name1);
+                $data1[] = $name1;
+                $content->interv=json_encode($data1);
+            }
+        }
+        if($request->hasfile('products')){
+            foreach($request->file('products') as $image2)
+            {
+                $name2 = time().'gallery'.'.'.$image2->getClientOriginalName();
+                $destinationPath ='gallery/';
+                $image2->move($destinationPath, $name2);
+                $data2[] = $name2;
+                $content->products=json_encode($data2);
+            }
+        }
+        $content->update();
+        $notification = array(
+            'messege' => 'Ajouté avec succès!',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
 }

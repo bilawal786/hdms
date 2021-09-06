@@ -30,6 +30,69 @@
                             <div class="panel-body text-justify">
                                 {!! $content->about !!}
                             </div>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <!-- Projects Filter
+                                    ============================================= -->
+                                    <div class="col-xs-12 col-sm-12 col-md-12 projects-filter">
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a class="active-filter" href="#" data-filter=".*">Toute</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-filter=".equip">Notre Équipe</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-filter=".interv">Nos Interventions</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-filter=".products">Nos Produits</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- .projects-filter end -->
+                                </div>
+                                <!-- .row end -->
+
+                                <!-- Projects Item
+                                ============================================= -->
+                                <div id="projects-all" class="row">
+
+                                    <!-- Project Item #1 -->
+                                    @foreach(json_decode($content->equip, true) as $img)
+                                    <div class="col-xs-12 col-sm-6 col-md-3 project-item equip gardening">
+                                        <div class="project-img">
+                                                <img class="" style="height: 300px" src="{{asset('gallery/'.$img)}}" alt="interior"/>
+                                        </div>
+                                        <!-- .project-img end -->
+                                    </div>
+                                    @endforeach
+                                    <!-- .project-item end -->
+
+                                    <!-- Project Item #2 -->
+                                    @foreach(json_decode($content->interv, true) as $img)
+                                        <div class="col-xs-12 col-sm-6 col-md-3 project-item interv gardening">
+                                            <div class="project-img">
+                                                <img class="" style="height: 300px" src="{{asset('gallery/'.$img)}}" alt="interior"/>
+                                            </div>
+                                            <!-- .project-img end -->
+                                        </div>
+                                @endforeach
+                                    <!-- .project-item end -->
+
+                                    <!-- Project Item #3 -->
+                                    @foreach(json_decode($content->products, true) as $img)
+                                        <div class="col-xs-12 col-sm-6 col-md-3 project-item products gardening">
+                                            <div class="project-img">
+                                                <img class="" style="height: 300px" src="{{asset('gallery/'.$img)}}" alt="interior"/>
+                                            </div>
+                                            <!-- .project-img end -->
+                                        </div>
+                                @endforeach
+                                    <!-- .project-item end -->
+                                </div>
+                                <!-- .row end -->
+                            </div>
                         </div>
                     </div>
 

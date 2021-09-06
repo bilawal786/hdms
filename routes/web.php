@@ -24,6 +24,8 @@ Route::get('/general/content', 'Admin\GeneralSettingsController@content')->name(
 Route::post('/general/content/store', 'Admin\GeneralSettingsController@contentstore')->name('content.store');
 Route::get('/offers/index', 'Admin\GeneralSettingsController@offers')->name('offers.index');
 Route::post('/offers/store', 'Admin\GeneralSettingsController@offersstore')->name('offers.store');
+Route::get('/gallery/index', 'Admin\GeneralSettingsController@gallery')->name('gallery.index');
+Route::post('/gallery/store', 'Admin\GeneralSettingsController@gallerystore')->name('gallery.store');
 
 Route::get('/temoignage/index', 'Admin\TestimonialController@index')->name('testimonial.index');
 Route::post('/temoignage/store', 'Admin\TestimonialController@store')->name('testimonial.store');
@@ -33,6 +35,7 @@ Route::get('/queries/index', 'Admin\QueriesController@index')->name('queries.ind
 Route::get('/queries/view/{id}', 'Admin\QueriesController@view')->name('queries.view');
 Route::get('/queries/status/{id}/{status}', 'Admin\QueriesController@status')->name('query.status');
 Route::post('/queries/update/{id}', 'Admin\QueriesController@update')->name('query.update');
+Route::post('/queries/update1/{id}', 'Admin\QueriesController@update1')->name('query.update1');
 Route::get('/queries/processing', 'Admin\QueriesController@processing')->name('queries.processing');
 Route::get('/queries/complete', 'Admin\QueriesController@complete')->name('queries.complete');
 Route::post('/payment/link/store', 'Admin\QueriesController@paymentLink')->name('payment.store');
@@ -60,5 +63,6 @@ Route::group(['middleware' => ['auth', 'web']], function() {
 Route::get('user/queries', 'UserController@queries')->name('user.queries');
 Route::get('user/queries/view/{id}', 'UserController@queryView')->name('user.queries.view');
 Route::get('user/dashboard', 'UserController@dashboard')->name('user.dashboard');
+Route::get('customer/query/status/{id}/{status}', 'UserController@queryStatus')->name('customer.query.status');
 
 });

@@ -88,4 +88,21 @@ class QueriesController extends Controller
         );
         return redirect()->back()->with($notification);
     }
+    public function update1(Request $request, $id){
+        $query = Query::find($id);
+        $query->quantity = $request->quantity;
+        if($request->installed){
+            foreach($request->installed as $size)
+            {
+                $data[] = $size;
+                $query->installed = json_encode($data);
+            }
+        }
+        $query->update();
+        $notification = array(
+            'messege' => 'Ajouté avec succès!',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
 }

@@ -41,6 +41,10 @@ class CreateContentsTable extends Migration
 
             $table->longText('quoteh');
             $table->longText('quote');
+
+            $table->longText('equip')->nullable();
+            $table->longText('interv')->nullable();
+            $table->longText('products')->nullable();
             $table->timestamps();
         });
     }

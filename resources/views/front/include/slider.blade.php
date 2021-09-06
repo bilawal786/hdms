@@ -38,7 +38,7 @@
                         </div>
                         <div class="widget-contact-info">
                             <p class="text-capitalize">E-mail</p>
-                            <p class="font-heading text-white">{{$gs->email}}</p>
+                            <a href="mailto:{{$gs->email}}"><p class="font-heading text-white">{{$gs->email}}</p></a>
                         </div>
                     </li>
                     <!-- .widget end -->
@@ -49,7 +49,7 @@
                         </div>
                         <div class="widget-contact-info">
                             <p class="text-capitalize">Téléphone</p>
-                            <p class="text-capitalize font-heading text-white">{{$gs->phone1}}</p>
+                            <a href="tel:{{$gs->phone1}}"><p class="text-capitalize font-heading text-white">{{$gs->phone1}}</p></a>
                         </div>
                     </li>
                     <!-- .widget end -->

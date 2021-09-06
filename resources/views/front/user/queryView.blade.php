@@ -59,7 +59,7 @@
                                 <b>Quantité de climatiseurs:</b>
                             </div>
                             <div class="col-md-3">
-                                {{$query->quantity}}
+                                {{count(json_decode($query->installed, true))}}
                             </div>
                             <hr>
                             <div class="col-md-3">

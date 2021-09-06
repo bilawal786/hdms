@@ -30,6 +30,7 @@ class CreateQueriesTable extends Migration
             $table->longText('installed');
             $table->integer('status')->default(0);
             $table->integer('paymentstatus')->default(0);
+            $table->integer('customerstatus')->default(0);
             $table->timestamps();
         });
     }

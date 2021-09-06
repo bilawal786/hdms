@@ -22,4 +22,14 @@ class UserController extends Controller
         $query = Query::where('id', $id)->where('user_id', Auth::user()->id)->first();
         return view('front.user.queryView', compact('query'));
     }
+    public function queryStatus($id, $status){
+        $query = Query::find($id);
+        $query->customerstatus = $status;
+        $query->update();
+        $notification = array(
+            'messege' => 'Mise à jour du statut!',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
 }

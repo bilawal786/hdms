@@ -98,7 +98,7 @@
                                <b>Quantité de climatiseurs:</b>
                            </div>
                            <div class="col-md-3">
-                               {{$query->quantity}}
+                               {{count(json_decode($query->installed, true))}}
                            </div>
                            <hr>
                            <div class="col-md-3">
@@ -125,6 +125,25 @@
                            </div>
                            <div class="col-md-3">
                                {{$query->created_at}}
+                           </div>
+                           <div class="col-md-3">
+                               <b>Description:</b>
+                           </div>
+                           <div class="col-md-3">
+                               {{$query->message}}
+                           </div>
+                           <hr>
+                           <div class="col-md-3">
+                               <b>Statut du client:</b>
+                           </div>
+                           <div class="col-md-3">
+                               @if($query->customerstatus == 1)
+                                   <span class="badge badge-success">J'accepte</span>
+                               @elseif($query->customerstatus == 2)
+                                   <span class="badge badge-danger">Rejeter</span>
+                               @else
+                                   <span class="badge badge-warning">Aucune action du client</span>
+                               @endif
                            </div>
                        </div>
                         <hr>
@@ -163,6 +182,29 @@
                             @else
 
                             @endif
+                        </div>
+                        </form>
+                        <hr>
+                        <form action="{{route('query.update1', ['id' => $query->id])}}" method="POST">
+                            @csrf
+                        <div class="row">
+                            <div class="col-md-3">
+                                <b>Combien de clients de climatiseur ont-ils ?:</b>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="number" name="quantity" value="{{count(json_decode($query->installed, true))}}"  class="form-control ac">
+                            </div>
+                            <div class="col-md-6">
+                                @foreach(json_decode($query->installed, true) as $ins)
+                                    <input type="text" name="installed[]" value="{{$ins}}" class="form-control">
+                                @endforeach
+                                <div class="values">
+
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary btn-sm">Sauvegarder</button>
+                            </div>
                         </div>
                         </form>
                      </div>
@@ -281,4 +323,17 @@
 
 </div></div>
 
+@endsection
+@section('script')
+<script>
+    $(document).ready(function(){
+        $(".ac").keyup(function(){
+            $(".values").empty();
+            var length = this.value;
+            for (let i = 0; i < length; i++) {
+                $(".values").append( "<input type=\"text\" class=\"form-control ac\" name=\"installed[]\" placeholder=\"Dans quel pièce souhaitez-vous l’installer\" required/>" );
+            }
+        });
+    });
+</script>
 @endsection

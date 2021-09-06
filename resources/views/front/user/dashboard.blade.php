@@ -43,6 +43,7 @@
                             <th>PROCHAIN ENTRETIEN</th>
                             <th>Statut</th>
                             <th>Action</th>
+                            <th>Valider</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -63,9 +64,19 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="{{route('user.queries.view' , ['id'=>$row->id])}}" class="btn btn-sm btn-success" data-toggle="tooltip" title="edit">
+                                    <a href="{{route('user.queries.view' , ['id'=>$row->id])}}" class="btn btn-sm btn-success" >
                                         <i class="fa fa-eye"></i>
                                     </a>
+                                </td>
+                                <td>
+                                    @if($row->customerstatus == 0)
+                                        <a href="{{route('customer.query.status', ['id' => $row->id, 'status' => '1'])}}"><button class="btn btn-sm">J'accepte</button></a>
+                                        <a href="{{route('customer.query.status', ['id' => $row->id, 'status' => '2'])}}"><button class="btn btn-sm">Rejeter</button></a>
+                                    @elseif($row->customerstatus == 1)
+                                        J'accepte
+                                    @else
+                                        Rejeter
+                                    @endif
                                 </td>
                             </tr>
                         @endforeach
