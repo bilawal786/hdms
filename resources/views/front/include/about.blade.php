@@ -59,6 +59,7 @@
                                 <div id="projects-all" class="row">
 
                                     <!-- Project Item #1 -->
+                                    @if($content->equip)
                                     @foreach(json_decode($content->equip, true) as $img)
                                     <div class="col-xs-12 col-sm-6 col-md-3 project-item equip gardening">
                                         <div class="project-img">
@@ -67,9 +68,11 @@
                                         <!-- .project-img end -->
                                     </div>
                                     @endforeach
+                                    @endif
                                     <!-- .project-item end -->
 
                                     <!-- Project Item #2 -->
+                                    @if($content->interv)
                                     @foreach(json_decode($content->interv, true) as $img)
                                         <div class="col-xs-12 col-sm-6 col-md-3 project-item interv gardening">
                                             <div class="project-img">
@@ -78,9 +81,11 @@
                                             <!-- .project-img end -->
                                         </div>
                                 @endforeach
+                                    @endif
                                     <!-- .project-item end -->
 
                                     <!-- Project Item #3 -->
+                                    @if($content->products)
                                     @foreach(json_decode($content->products, true) as $img)
                                         <div class="col-xs-12 col-sm-6 col-md-3 project-item products gardening">
                                             <div class="project-img">
@@ -89,6 +94,7 @@
                                             <!-- .project-img end -->
                                         </div>
                                 @endforeach
+                                @endif
                                     <!-- .project-item end -->
                                 </div>
                                 <!-- .row end -->
