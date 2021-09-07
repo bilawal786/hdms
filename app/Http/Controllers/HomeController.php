@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Query;
+use App\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $users = User::where('role', '2')->count();
+        $newqueries = Query::where('status', '0')->count();
+        return view('home', compact('users'));
     }
 }

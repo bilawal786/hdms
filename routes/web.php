@@ -46,6 +46,7 @@ Route::get('customers/orders/{id}', 'Admin\CustomerController@orders')->name('cu
 Route::get('customers/edit/{id}', 'Admin\CustomerController@edit')->name('customer.edit');
 Route::post('customers/update/{id}', 'Admin\CustomerController@update')->name('customer.update');
 Route::get('customers/payments', 'Admin\CustomerController@payments')->name('customers.payments');
+Route::get('admin/sponsership', 'Admin\CustomerController@sponsership')->name('admin.sponsership');
 
 
 Route::get('/update-Password', [
@@ -64,5 +65,7 @@ Route::get('user/queries', 'UserController@queries')->name('user.queries');
 Route::get('user/queries/view/{id}', 'UserController@queryView')->name('user.queries.view');
 Route::get('user/dashboard', 'UserController@dashboard')->name('user.dashboard');
 Route::get('customer/query/status/{id}/{status}', 'UserController@queryStatus')->name('customer.query.status');
+Route::post('customer/profile/update}', 'UserController@profileupdate')->name('user.profile.update');
+Route::post('sponsership/store', 'UserController@sponsershipStore')->name('sponsership.store');
 
 });

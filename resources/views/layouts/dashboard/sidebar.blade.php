@@ -172,6 +172,23 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-ellipsis-h"></i>
+                        <p>
+                            Parrainage
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admin.sponsership')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Parrainages </p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
             @else
 

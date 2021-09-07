@@ -3,6 +3,7 @@
 <head>
     <?php
     $gs = \App\GeneralSettings::find(1);
+    $content = \App\Content::find(1);
     ?>
     <!-- Document Meta
     ============================================= -->
@@ -175,19 +176,19 @@
                             <p class="mb-0">{{$gs->footer}}</p>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 widget-navigation text-center-xs mb-30-xs">
+                    <div class="col-xs-12 col-sm-6 col-md-4 widget-navigation text-center-xs mb-30-xs">
                         <h5 class="text-capitalize text-white">la navigation</h5>
                         <div class="row">
                             <div class="col-xs-12 col-sm-6 col-md-6">
                                 <ul class="list-unstyled text-capitalize">
                                     <li>
-                                        <a href="#"> Accueil</a>
+                                        <a href="{{route('front.index')}}"> Accueil</a>
                                     </li>
                                     <li>
-                                        <a href="#"> Contact</a>
+                                        <a href="#about"> À propos de nous</a>
                                     </li>
                                     <li>
-                                        <a href="#"> Nos services</a>
+                                        <a href="#myser"> Nos services</a>
                                     </li>
                                 </ul>
                             </div>
@@ -196,19 +197,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-5 widget-services text-center-xs">
+                    <div class="col-xs-12 col-sm-6 col-md-4 widget-services text-center-xs">
                         <h5 class="text-capitalize text-white">Nos services</h5>
                         <div class="row">
-                            <div class="col-xs-12 col-sm-4 col-md-4">
+                            <div class="col-xs-12 col-sm-4 col-md-12">
                                 <ul class="list-unstyled text-capitalize">
                                     <li>
-                                        <a href="#"> DESIGN PERSONALISÉ</a>
+                                        <a href="#"> {{$content->sh1}}</a>
                                     </li>
                                     <li>
-                                        <a href="#"> INSTALLATION</a>
+                                        <a href="#">  {{$content->sh2}}</a>
                                     </li>
                                     <li>
-                                        <a href="#"> MAINTENANCE</a>
+                                        <a href="#">  {{$content->sh3}}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -222,7 +223,7 @@
         <div class="widget-social">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-5 mb-30-xs mb-30-sm">
+                    <div class="col-xs-12 col-sm-12 col-md-12 mb-30-xs mb-30-sm">
                         <div class="widget-social-info pull-left text-capitalize pull-none-xs mb-15-xs">
                             <p class="mb-0">Suivez-nous<br>
                                 sur les réseaux sociaux</p>
@@ -234,29 +235,6 @@
                             <a href="{{$gs->instagram}}">
                                 <i class="fa fa-google-plus"></i><i class="fa fa-instagram"></i>
                             </a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-7">
-                        <div class="widget-newsletter-info pull-left text-capitalize pull-none-xs mb-15-xs">
-                            <p class="mb-0">s'abonner<br>
-                                sur notre newsletter</p>
-                        </div>
-                        <div class="widget-newsletter-form pull-right text-right">
-
-                            <!-- Mailchimp Form
-                            =============================================-->
-                            <form class="mailchimp">
-                                <div class="subscribe-alert">
-                                </div>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Saisissez votre compte de messagerie">
-                                    <span class="input-group-btn">
-								<button class="btn text-capitalize" type="button">rejoindre</button>
-								</span>
-                                </div>
-                                <!-- /input-group -->
-                            </form>
-                            <!--Mailchimp Form End-->
                         </div>
                     </div>
                 </div>
@@ -315,5 +293,18 @@
         @endif
     </script>
     @include('include.js')
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/60e06954d6e7610a49a96d7f/1f9m9mtst';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>

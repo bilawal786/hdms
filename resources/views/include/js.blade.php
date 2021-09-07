@@ -274,3 +274,8 @@
     document.getElementById("defaultOpen").click();
 </script>
 
+<script>
+    jQuery(function(){
+        jQuery('.equipee').click();
+    });
+</script>

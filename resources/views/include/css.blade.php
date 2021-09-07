@@ -222,10 +222,8 @@
     .tabcontent {
         float: left;
         padding: 0px 12px;
-        border: 1px solid #ccc;
         width: 80%;
         border-left: none;
-        height: 300px;
     }
     .callout{
         padding: 20px

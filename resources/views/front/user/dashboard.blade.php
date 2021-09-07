@@ -16,8 +16,9 @@
 
             <div class="tab">
                 <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Tableau de bord</button>
-                <button class="tablinks" onclick="openCity(event, 'Paris')">Mes requêtes</button>
+                <button class="tablinks" onclick="openCity(event, 'Paris')">ENTRETIEN</button>
                 <button class="tablinks" onclick="openCity(event, 'Tokyo')">Mes paiements</button>
+                <button class="tablinks" onclick="openCity(event, 'Lahore')">Détails du compte</button>
                 <button class="tablinks" href="{{route('logout')}}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                         Sortie
@@ -28,7 +29,20 @@
             </div>
 
             <div id="London" class="tabcontent">
-                <h3 style="padding: 20px">Bienvenue {{Auth::user()->name}}</h3>
+                <p style="padding: 20px; font-size: 20px">
+
+                    @error('email')
+                    <strong style="color: red">Le couriel a déja été pris en compte.</strong><br><br>
+                    @enderror
+
+                    Bonjour <b>{{Auth::user()->name}}</b>, Bienvenue dans votre espace client.
+                    <br>
+                    <br>
+                    Depuis votre espace client, vous pouvez consulter vos factures, votre carnet d'entretien de vos climatiseurs, modifier votre mot de passe ainsi que les details de vot compte.
+                    <br>
+                    <br>
+                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary">Parrainage</button>
+                    </p>
             </div>
 
             <div id="Paris" class="tabcontent">
@@ -106,7 +120,7 @@
                                 <td>{{$row->user->name}}</td>
                                 <td>{{$row->user->email}}</td>
                                 <td>{{$row->user->phone}}</td>
-                                <td>{{URL::to('/').'/payment/'.$row->link}}</td>
+                                <td><a target="_blank" href="{{URL::to('/').'/payment/'.$row->link}}">{{URL::to('/').'/payment/'.$row->link}}</a></td>
                                 <td>
                                     <a href="{{route('user.queries.view' , ['id'=>$row->q_id])}}">Aller à la requête</a>
                                 </td>
@@ -132,6 +146,71 @@
                 </div>
             </div>
 
+            <div id="Lahore" class="tabcontent">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form action="{{route('user.profile.update')}}" method="POST">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="email">Nom:</label>
+                                    <input type="text" class="form-control" id="email" value="{{$user->name}}" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" value="{{$user->email}}" readonly name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Telephone:</label>
+                                    <input type="text" class="form-control" id="email" value="{{$user->phone}}" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Ot de passe actuel (laisser vide pour laisser
+                                        inchangé):</label>
+                                    <input type="password" class="form-control" id="pwd" name="oldpassword">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Nouveau mot de passe (laisser vide pour laisser
+                                        inchangé):</label>
+                                    <input type="password" class="form-control" id="pwd" name="newpassword">
+                                </div>
+                                <button type="submit" class="btn btn-primary">SAUVEGARDER
+                                    CHANGEMENTS</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Parrainage</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="{{route('sponsership.store')}}" method="POST">
+                        @csrf
+                        <input type="text" name="name" class="form-control" placeholder="Client Nom">
+                        <input type="email" name="email" class="form-control" placeholder="Client Email">
+                        <input type="text" name="phone" class="form-control" placeholder="Client Telephone">
+                        <input type="submit" value="Sauvegarder" name="phone" class="btn btn-primary">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Proche</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 @endsection

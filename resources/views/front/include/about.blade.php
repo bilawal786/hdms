@@ -37,10 +37,7 @@
                                     <div class="col-xs-12 col-sm-12 col-md-12 projects-filter">
                                         <ul class="list-inline">
                                             <li>
-                                                <a class="active-filter" href="#" data-filter=".*">Toute</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" data-filter=".equip">Notre Équipe</a>
+                                                <a href="#" class="equipee" data-filter=".equip">Notre Équipe</a>
                                             </li>
                                             <li>
                                                 <a href="#" data-filter=".interv">Nos Interventions</a>

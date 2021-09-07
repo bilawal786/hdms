@@ -5,7 +5,7 @@
                 <div class="heading heading-2 text-center">
                     <div class="heading-bg">
                         <p class="mb-0">Ils nous font toujours confiance</p>
-                        <h2>Nos clients</h2>
+                        <h2>Nos Partenaires </h2>
                     </div>
                 </div>
                 <!-- .heading end -->

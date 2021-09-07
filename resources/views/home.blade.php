@@ -36,7 +36,7 @@
                         <!-- small box -->
                         <div class="small-box bg-primary">
                             <div class="inner">
-                                <h3>1</h3>
+                                <h3>{{$users}}</h3>
 
                                 <p>Total Clients</p>
                             </div>

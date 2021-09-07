@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Payment;
+use App\Sponser;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -31,5 +32,9 @@ class CustomerController extends Controller
     public function payments(){
         $payments = Payment::orderby('created_at', 'DESC')->get();
         return view('admin.customers.payments', compact('payments'));
+    }
+    public function sponsership(){
+        $sponsership = Sponser::orderby('created_at', 'DESC')->get();
+        return view('admin.customers.sponsership', compact('sponsership'));
     }
 }
