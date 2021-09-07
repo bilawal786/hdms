@@ -82,13 +82,10 @@ class UserController extends Controller
         return redirect()->back()->with($notification);
     }
     public function sponsershipStore(Request $request){
-        $validator=$request->validate([
-            'email' => 'required|string|email|max:255|unique:users',
-        ]);
         $sponsership = new Sponser();
         $sponsership->user_id = Auth::user()->id;
-        $sponsership->name = $request->name;
-        $sponsership->email = $request->email;
+        $sponsership->name = $request->fname;
+        $sponsership->email = $request->lname;
         $sponsership->phone = $request->phone;
         $sponsership->save();
         $notification = array(

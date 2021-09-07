@@ -36,7 +36,7 @@
                                     <thead>
                                     <tr>
                                         <th>Nom</th>
-                                        <th>E-mail</th>
+                                        <th>Prénom</th>
                                         <th>Téléphone</th>
                                         <th>Parrain de</th>
 {{--                                        <th>Éditer</th>--}}

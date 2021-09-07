@@ -39,9 +39,6 @@
                     <br>
                     <br>
                     Depuis votre espace client, vous pouvez consulter vos factures, votre carnet d'entretien de vos climatiseurs, modifier votre mot de passe ainsi que les details de vot compte.
-                    <br>
-                    <br>
-                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary">Parrainage</button>
                     </p>
             </div>
 
@@ -159,14 +156,14 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email:</label>
-                                    <input type="email" class="form-control" id="email" value="{{$user->email}}" readonly name="email">
+                                    <input type="email" class="form-control" id="email" readonly value="{{$user->name}}" name="email" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Telephone:</label>
                                     <input type="text" class="form-control" id="email" value="{{$user->phone}}" name="phone" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="pwd">Ot de passe actuel (laisser vide pour laisser
+                                    <label for="pwd">Mot de passe actuel (laisser vide pour laisser
                                         inchangé):</label>
                                     <input type="password" class="form-control" id="pwd" name="oldpassword">
                                 </div>
@@ -175,8 +172,7 @@
                                         inchangé):</label>
                                     <input type="password" class="form-control" id="pwd" name="newpassword">
                                 </div>
-                                <button type="submit" class="btn btn-primary">SAUVEGARDER
-                                    CHANGEMENTS</button>
+                                <button type="submit" class="btn btn-primary">SAUVEGARDER</button>
                             </form>
                         </div>
                     </div>
@@ -187,30 +183,4 @@
     </section>
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Parrainage</h4>
-                </div>
-                <div class="modal-body">
-                    <form action="{{route('sponsership.store')}}" method="POST">
-                        @csrf
-                        <input type="text" name="name" class="form-control" placeholder="Client Nom">
-                        <input type="email" name="email" class="form-control" placeholder="Client Email">
-                        <input type="text" name="phone" class="form-control" placeholder="Client Telephone">
-                        <input type="submit" value="Sauvegarder" name="phone" class="btn btn-primary">
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Proche</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
 @endsection
