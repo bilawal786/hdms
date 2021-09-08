@@ -48,6 +48,10 @@ Route::post('customers/update/{id}', 'Admin\CustomerController@update')->name('c
 Route::get('customers/payments', 'Admin\CustomerController@payments')->name('customers.payments');
 Route::get('admin/sponsership', 'Admin\CustomerController@sponsership')->name('admin.sponsership');
 
+Route::post('maintain/store', 'Admin\QueriesController@maintainstore')->name('maintain.store');
+Route::post('ac/store', 'Admin\QueriesController@acstore')->name('ac.store');
+Route::get('maintain/hostory/{id}', 'Admin\QueriesController@history')->name('maintain.hostory');
+
 
 Route::get('/update-Password', [
     'uses' => 'Admin\GeneralSettingsController@password_change',
@@ -67,5 +71,6 @@ Route::get('user/dashboard', 'UserController@dashboard')->name('user.dashboard')
 Route::get('customer/query/status/{id}/{status}', 'UserController@queryStatus')->name('customer.query.status');
 Route::post('customer/profile/update}', 'UserController@profileupdate')->name('user.profile.update');
 Route::post('sponsership/store', 'UserController@sponsershipStore')->name('sponsership.store');
+Route::get('user/maintain/hostory/{id}', 'UserController@history')->name('user.maintain.hostory');
 
 });

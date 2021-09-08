@@ -22,12 +22,7 @@ class CreateQueriesTable extends Migration
             $table->string('service');
             $table->string('message');
             $table->string('price');
-            $table->string('quantity')->nullable();
-            $table->string('service_date')->nullable();
-            $table->string('next_maintain')->nullable();
-            $table->string('place')->nullable();
-            $table->string('mark')->nullable();
-            $table->longText('installed');
+            $table->longText('installed')->nullable();
             $table->integer('status')->default(0);
             $table->integer('paymentstatus')->default(0);
             $table->integer('customerstatus')->default(0);

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Ac;
 use App\Http\Controllers\Controller;
+use App\Maintain;
 use App\Payment;
 use App\Query;
 use App\User;
@@ -105,4 +107,37 @@ class QueriesController extends Controller
         );
         return redirect()->back()->with($notification);
     }
+    public function acstore(Request $request){
+        $ac = new Ac();
+        $ac->q_id = $request->q_id;
+        $ac->place = $request->place;
+        $ac->mark = $request->mark;
+        $ac->installation = $request->installation;
+        $ac->save();
+        $notification = array(
+            'messege' => 'Ajouté avec succès!',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
+    public function history($id){
+        $ac = Ac::find($id);
+        $main = Maintain::where('ac_id', $id)->get();
+        return view('admin.queries.history', compact('main', 'ac'));
+    }
+    public function maintainstore(Request $request){
+        $maintain = new Maintain();
+        $maintain->ac_id = $request->ac_id;
+        $maintain->q_id = $request->q_id;
+        $maintain->service_date = $request->service_date;
+        $maintain->next_maintain = $request->next_maintain;
+        $maintain->comments = $request->comments;
+        $maintain->save();
+        $notification = array(
+            'messege' => 'Ajouté avec succès!',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
+
 }

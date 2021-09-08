@@ -58,6 +58,12 @@
                                         <input class="form-control"  type="text" name="phone" value="{{$customer->phone}}" required>
                                     </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">Euros</label>
+                                        <input class="form-control"  type="text" name="points" value="{{$customer->points}}" required>
+                                    </div>
+                                </div>
                             </div>
                             <button type="submit" class="btn btn-primary">Sauvegarder</button>
                         </div>

@@ -39,6 +39,7 @@
                                         <th>Nom</th>
                                         <th>E-mail</th>
                                         <th>Téléphone</th>
+                                        <th>Euros</th>
                                         <th>Éditer</th>
                                     </tr>
                                     </thead>
@@ -49,6 +50,7 @@
                                             <td>{{$row->name}}</td>
                                             <td>{{$row->email}}</td>
                                             <td>{{$row->phone}}</td>
+                                            <td>{{$row->points}}</td>
                                             <td>
                                                 <a href="{{route('customer.edit' , ['id'=>$row->id])}}" class="btn btn-sm btn-success" data-toggle="tooltip" title="edit">
                                                     <i class="fa fa-pen"></i>

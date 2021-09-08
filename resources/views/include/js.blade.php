@@ -278,4 +278,12 @@
     jQuery(function(){
         jQuery('.equipee').click();
     });
+
+    $('.serviceselect').on('change', function() {
+        if (this.value == 'INSTALLATION'){
+            $('.installed').show();
+        }else {
+            $('.installed').hide();
+        }
+    });
 </script>

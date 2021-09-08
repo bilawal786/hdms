@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Ac;
+use App\Maintain;
 use App\Payment;
 use App\Query;
 use App\Sponser;
@@ -93,5 +95,10 @@ class UserController extends Controller
             'alert-type' => 'success'
         );
         return redirect()->back()->with($notification);
+    }
+    public function history($id){
+        $ac = Ac::find($id);
+        $main = Maintain::where('ac_id', $id)->get();
+        return view('front.user.history', compact('main', 'ac'));
     }
 }

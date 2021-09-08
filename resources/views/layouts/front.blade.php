@@ -84,7 +84,7 @@
                         </li>
                         <!-- li end -->
                         <li>
-                            <a href="#clients">Clients</a>
+                            <a href="#clients">PARTENAIRES</a>
                         </li>
                         @guest
                             <li>

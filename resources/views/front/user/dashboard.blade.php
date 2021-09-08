@@ -38,7 +38,7 @@
                     Bonjour <b>{{Auth::user()->name}}</b>, Bienvenue dans votre espace client.
                     <br>
                     <br>
-                    Depuis votre espace client, vous pouvez consulter vos factures, votre carnet d'entretien de vos climatiseurs, modifier votre mot de passe ainsi que les details de vot compte.
+                    Depuis votre espace client, vous pouvez consulter vos factures, votre carnet d'entretien de vos climatiseurs, modifier votre mot de passe ainsi que les details de votre compte.
                     </p>
             </div>
 
@@ -47,11 +47,7 @@
                     <table class="table table-bordered">
                         <thead>
                         <tr>
-                            <th>CLIMATISEUR Marque</th>
-                            <th>LIEUX</th>
                             <th>DATE DE POSE</th>
-                            <th>DATE D'ENTRETIEN</th>
-                            <th>PROCHAIN ENTRETIEN</th>
                             <th>Statut</th>
                             <th>Action</th>
                             <th>Valider</th>
@@ -60,11 +56,7 @@
                         <tbody>
                         @foreach($queries as $row)
                             <tr>
-                                <td>{{$row->mark}}</td>
-                                <td>{{$row->place}}</td>
                                 <td>{{$row->created_at->format('m/d/y')}}</td>
-                                <td>{{$row->service_date}}</td>
-                                <td>{{$row->next_maintain}}</td>
                                 <td>
                                     @if($row->status == 0)
                                         <span class="badge badge-primary">Nouvelle</span>

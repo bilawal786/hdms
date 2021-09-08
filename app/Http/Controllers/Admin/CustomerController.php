@@ -22,6 +22,7 @@ class CustomerController extends Controller
         $customer = User::find($id);
         $customer->name = $request->name;
         $customer->phone = $request->phone;
+        $customer->points = $request->points;
         $customer->update();
         $notification = array(
             'messege' => 'Sauvegarde réussie!',

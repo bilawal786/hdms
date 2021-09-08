@@ -30,25 +30,25 @@ class GeneralSeeder extends Seeder
             'instagram'    => 'https://www.instagram.com/',
         ]);
         Content::create([
-            'slider1' => 'front/assets/images/08.jpg',
-            'slider2' => 'front/assets/images/12.jpg',
-            'slider3' => 'front/assets/images/08.jpg',
+            'slider1' => 'slider/1631030760slider.jpg',
+            'slider2' => 'slider/1631030771slider.jpg',
+            'slider3' => 'slider/1631030778slider.jpg',
 
-            'simage1' => 'front/assets/images/07.png',
-            'simage2' => 'front/assets/images/05.png',
-            'simage3' => 'front/assets/images/06.png',
+            'simage1' => 'service/1631031039service.png',
+            'simage2' => 'service/1631031054service.png',
+            'simage3' => 'service/1631031064service.png',
 
             'sh1' => 'INSTALLATION',
             'sh2' => 'ENTRETIEN',
             'sh3' => 'MAINTENANCE / DEPANNAGE / DIAGNOSTICS',
 
-            'sd1' => 'Tiling is an effective way to add elegance & style to any bath or kitchen Yellow Hats Remodeling specializes in tile installation and works directly with each homeowner.',
-            'sd2' => 'Tiling is an effective way to add elegance & style to any bath or kitchen Yellow Hats Remodeling specializes in tile installation and works directly with each homeowner.',
-            'sd3' => 'Tiling is an effective way to add elegance & style to any bath or kitchen Yellow Hats Remodeling specializes in tile installation and works directly with each homeowner.',
+            'sd1' => 'Nos techniciens seront en mesure dinstaller votre climatiseur en toute sécurité.',
+            'sd2' => 'Nous réaliserons lentretien de votre climatisation pour les logements collectifs, les entreprises et les particuliers.',
+            'sd3' => 'Votre climatiseur ne refroidi plus ? Il ne sallum...',
 
-            'sv1' => 'tgbNymZ7vqY',
-            'sv2' => 'tgbNymZ7vqY',
-            'sv3' => 'tgbNymZ7vqY',
+            'sv1' => 'H6JMr2gMmNg',
+            'sv2' => 'H6JMr2gMmNg',
+            'sv3' => 'H6JMr2gMmNg',
 
             'about' => 'HDMS Clim, est à votre service pour l’achat, la pose, la maintenance le diagnostic et le dépannage de votre climatisation.
 Nos équipes sont à votre disposition pour répondre à toutes vos problématiques concernant la climatisation que vous soyez particuliers ou professionnels.
@@ -64,45 +64,43 @@ Nos prestations globales pour tous les systèmes de génie climatique nous perme
                         (T)ravail de qualité.',
             'engagement' => 'HDNS Clim s’est attachée à conserver les valeurs qui ont animé sa création. Une charte d’engagement a été établie pour conduire chaque professionnel à s’impliquer de manière identique. ',
             'quoteh' => 'La qualité avant tout',
-            'quote' => 'Le système de gestion de la qualité de la construction de pointe LATISTA garantit des normes de qualité élevées sur tous les sites de lentreprise. Le mécanisme de contrôle permet un suivi intégré des travaux à toutes les étapes de la construction et comprend plus de 100 références dévaluation de la qualité.'
+            'quote' => 'Le système de gestion de la qualité de la construction de pointe LATISTA garantit des normes de qualité élevées sur tous les sites de lentreprise. Le mécanisme de contrôle permet un suivi intégré des travaux à toutes les étapes de la construction et comprend plus de 100 références dévaluation de la qualité.',
+            'equip' => '["1631031889gallery.notre equipe 01.jpg","1631031889gallery.notre equipe 02.jpg","1631031889gallery.notre equipe 03.jpg"]',
+            'interv' => '["1631031889gallery.INTERVENTION 01.jpg","1631031889gallery.INTERVENTION 02.jpg","1631031889gallery.INTERVENTION 03.jpg"]',
+            'products' => '["1631031889gallery.nos produits 01.jpg","1631031889gallery.nos produits 02.jpg","1631031889gallery.nos produits 03.jpg","1631031889gallery.nos produits 04.jpg"]'
         ]);
         Testimonial::create([
-            'name' => 'Begha',
-            'designation' => 'Director',
-            'review' => 'The company’s experts have accumulated valuable experience in green development, being savvy to all aspects of the certification process and requirements.'
+            'name' => 'Franck',
+            'designation' => 'Responsable des Adhérents et des Mandats',
+            'review' => 'Je tiens à remercier de tout coeur léquipe de HDMS CLIM à bientôt !'
         ]);
         Testimonial::create([
-            'name' => 'Begha',
-            'designation' => 'Director',
-            'review' => 'The company’s experts have accumulated valuable experience in green development, being savvy to all aspects of the certification process and requirements.'
+            'name' => 'Bernadine',
+            'designation' => 'Chargé de Développement Entreprises',
+            'review' => 'Je tiens à remercier de tout coeur léquipe de HDMS CLIM à bientôt !'
         ]);
         Testimonial::create([
-            'name' => 'Begha',
-            'designation' => 'Director',
-            'review' => 'The company’s experts have accumulated valuable experience in green development, being savvy to all aspects of the certification process and requirements.'
-        ]);
-        Testimonial::create([
-            'name' => 'Begha',
-            'designation' => 'Director',
-            'review' => 'The company’s experts have accumulated valuable experience in green development, being savvy to all aspects of the certification process and requirements.'
+            'name' => 'Pascal',
+            'designation' => 'Secrétaire Général',
+            'review' => 'Je tiens à remercier de tout coeur léquipe de HDMS CLIM à bientôt !'
         ]);
         Offers::create([
             'title1' => 'Offer 1',
-            'image1' => 'front/assets/images/10.png',
+            'image1' => 'offers/1631031653offers.jpg',
             'price1' => '599',
-            'valid1' => '2021-06-15T12:00:00+00:00',
+            'valid1' => '2021-09-09',
             'title2' => 'Offer 2',
-            'image2' => 'front/assets/images/10.png',
+            'image2' => 'offers/1631031983offers.jpg',
             'price2' => '599',
-            'valid2' => '2021-06-15T12:00:00+00:00',
+            'valid2' => '2021-09-09',
             'title3' => 'Offer 3',
-            'image3' => 'front/assets/images/10.png',
+            'image3' => 'offers/1631032017offers.jpg',
             'price3' => '599',
-            'valid3' => '2021-06-15T12:00:00+00:00',
+            'valid3' => '2021-09-09',
             'title4' => 'Offer 2',
-            'image4' => 'front/assets/images/10.png',
+            'image4' => 'offers/1631032050offers.jpg',
             'price4' => '599',
-            'valid4' => '2021-06-15T12:00:00+00:00',
+            'valid4' => '2021-09-09',
         ]);
     }
 }

@@ -32,6 +32,7 @@
                             <div class="col-md-3">
                                 {{$query->email}}
                             </div>
+                            <hr>
                             <div class="col-md-3">
                                 <b>Telephone:</b>
                             </div>
@@ -56,13 +57,6 @@
                                 @endif
                             </div>
                             <div class="col-md-3">
-                                <b>Quantité de climatiseurs:</b>
-                            </div>
-                            <div class="col-md-3">
-                                {{count(json_decode($query->installed, true))}}
-                            </div>
-                            <hr>
-                            <div class="col-md-3">
                                 <b>Installé sur:</b>
                             </div>
                             <div class="col-md-3">
@@ -70,6 +64,7 @@
                                     <option value="{{$size}}">{{$size}}</option>
                                 @endforeach
                             </div>
+                            <hr>
                             <div class="col-md-3">
                                 <b>Statut de paiement:</b>
                             </div>
@@ -91,6 +86,42 @@
                     </div>
 
                 </div><!-- /.col -->
+            </div>
+            <br><br>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Climatiseurs</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                            <th>CLIMATISEUR MARQUE</th>
+                            <th>LIEUX</th>
+                            <th>DATE D'INSTALLATION</th>
+                            <th>DATE DE CRÉATION</th>
+                            <th>HISTORIQUE D'ENTRETIEN</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($query->ac as $ac)
+                            <tr>
+                                <td>{{$ac->mark}}</td>
+                                <td>{{$ac->place}}</td>
+                                <td>{{$ac->installation}}</td>
+                                <td>{{$ac->created_at->format('y-m-d')}}</td>
+                                <td>
+                                    <a href="{{route('user.maintain.hostory', ['id' => $ac->id])}}" style="color: white" class="btn btn-sm btn-danger">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.card-body -->
             </div>
         </div>
     </section>

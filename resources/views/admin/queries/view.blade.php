@@ -94,12 +94,6 @@
                                {{$query->price}} €
                                @endif
                            </div>
-                           <div class="col-md-3">
-                               <b>Quantité de climatiseurs:</b>
-                           </div>
-                           <div class="col-md-3">
-                               {{count(json_decode($query->installed, true))}}
-                           </div>
                            <hr>
                            <div class="col-md-3">
                                <b>Installé sur:</b>
@@ -146,7 +140,7 @@
                                @endif
                            </div>
                        </div>
-                        <hr>
+<!--                        <hr>
                         <form action="{{route('query.update', ['id' => $query->id])}}" method="POST">
                             @csrf
                         <div class="row">
@@ -206,7 +200,44 @@
                                 <button type="submit" class="btn btn-primary btn-sm">Sauvegarder</button>
                             </div>
                         </div>
-                        </form>
+                        </form>-->
+                        <hr>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Climatiseurs</h3>
+                                <button data-toggle="modal" data-target="#ac" class="btn btn-primary btn-sm float-right">Ajouter</button>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>CLIMATISEUR MARQUE</th>
+                                    <th>LIEUX</th>
+                                    <th>DATE D'INSTALLATION</th>
+                                    <th>DATE DE CRÉATION</th>
+                                    <th>HISTORIQUE D'ENTRETIEN</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($query->ac as $ac)
+                                <tr>
+                                    <td>{{$ac->mark}}</td>
+                                    <td>{{$ac->place}}</td>
+                                    <td>{{$ac->installation}}</td>
+                                    <td>{{$ac->created_at->format('y-m-d')}}</td>
+                                    <td>
+                                        <a href="{{route('maintain.hostory', ['id' => $ac->id])}}" style="color: white" class="btn btn-sm btn-danger">
+                                            <i class="fa fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
                      </div>
 
                 </div><!-- /.col -->
@@ -311,6 +342,55 @@
                     <div class="col-md-12 pull-right">
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block">Créer un compte</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div></div>
+
+<div class="modal fade" id="ac" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ajouter un nouveau climatiseur</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form action="{{route('ac.store')}}" method="post" enctype="multipart/form-data" data-parsley-validate>
+                    @csrf
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="title"><b>CLIMATISEUR MARQUE</b><span class="text-danger">*</span></label>
+                            <input type="text"  class="form-control" name="mark" required>
+                            <input type="hidden" value="{{$query->id}}" name="q_id" required>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="title"><b>LIEUX</b><span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="place" required>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="title"><b>DATE D'INSTALLATION</b></label>
+                            <input type="date" class="form-control" name="installation">
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12 pull-right">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">Sauvegarder</button>
                         </div>
                     </div>
                 </form>

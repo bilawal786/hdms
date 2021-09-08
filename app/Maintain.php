@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Query extends Model
+class Maintain extends Model
 {
     public function ac(){
-        return $this->hasMany(Ac::class, 'q_id');
+        return $this->belongsTo(Ac::class, 'ac_id');
     }
 }

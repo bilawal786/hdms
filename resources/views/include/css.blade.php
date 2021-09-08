@@ -232,4 +232,7 @@
         color: #4169e1 !important;
         border-bottom: 2px solid #4169e1 !important;
     }
+    .navbar-nav {
+        margin-right: -20px !important;
+    }
 </style>
