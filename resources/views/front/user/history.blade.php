@@ -26,24 +26,39 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table id="example1" class="table table-bordered table-striped">
-                                    <thead>
-                                    <tr>
-                                        <th>DATE D'ENTRETIEN</th>
-                                        <th>PROCHAIN ENTRETIEN</th>
-                                        <th>COMMENTAIRES</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    @foreach($main as $row)
-                                        <tr>
-                                            <td>{{$row->service_date}}</td>
-                                            <td>{{$row->next_maintain}}</td>
-                                            <td>{{$row->comments}}</td>
-                                        </tr>
-                                    @endforeach
-                                    </tbody>
-                                </table>
+                                @foreach($main as $row)
+                                <div class="row" style="padding: 20px; border: 1px solid">
+                                    <div class="col-xs-6 col-md-6">
+                                        <b>DATE D'ENTRETIEN</b>
+                                    </div>
+                                    <div class="col-xs-6 col-md-6">
+                                        <b>COMMENTAIRES</b>
+                                    </div>
+                                    <hr>
+                                    <div class="col-xs-6 col-md-6">
+                                        {{$row->service_date}}
+                                    </div>
+                                    <div class="col-xs-6 col-md-6">
+                                        {{$row->servicecomments}}
+                                    </div>
+                                    <br><br>
+                                    <div class="col-xs-6 col-md-6">
+                                        <b>PROCHAIN ENTRETIEN</b>
+                                    </div>
+                                    <div class="col-xs-6 col-md-6">
+                                        <b>COMMENTAIRES</b>
+                                    </div>
+                                    <hr>
+                                    <div class="col-xs-6 col-md-6">
+                                        {{$row->next_maintain}}
+                                    </div>
+                                    <div class="col-xs-6 col-md-6">
+                                        {{$row->nextcomments}}
+                                    </div>
+                                </div>
+                                <br>
+                                @endforeach
+
                             </div>
                             <!-- /.card-body -->
                         </div>

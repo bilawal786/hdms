@@ -19,7 +19,8 @@ class CreateMaintainsTable extends Migration
             $table->integer('q_id');
             $table->string('service_date')->nullable();
             $table->longText('next_maintain')->nullable();
-            $table->longText('comments')->nullable();
+            $table->longText('servicecomments')->nullable();
+            $table->longText('nextcomments')->nullable();
             $table->timestamps();
         });
     }

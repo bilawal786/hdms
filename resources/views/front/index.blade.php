@@ -38,14 +38,14 @@
                     @csrf
                     <div class="form-group">
                         <label for="email">Nom:</label>
-                        <input type="text" class="form-control" id="email" placeholder="Client Nom" name="fname" required>
+                        <input type="text" class="form-control" id="email" placeholder="Nom du filleul" name="fname" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Prénom:</label>
-                        <input type="text" class="form-control" id="email" placeholder="Client Prénom"  name="lname" required>
+                        <input type="text" class="form-control" id="email" placeholder="Prénoms du filleul"  name="lname" required>
                     </div>
-                    <input type="text" name="phone" class="form-control" placeholder="Client Telephone">
-                    <input type="submit" value="Sauvegarder" name="phone" class="btn btn-primary">
+                    <input type="text" name="phone" class="form-control" placeholder="Téléphone du filleul">
+                    <input type="submit" value="Envoyer" class="btn btn-primary">
                 </form>
             </div>
             <div class="modal-footer">

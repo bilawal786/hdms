@@ -76,13 +76,7 @@
                                 @endif
                             </div>
                         </div>
-                        <hr>
-                        <div class="col-md-3">
-                            <b>DATE DE POSE:</b>
-                        </div>
-                        <div class="col-md-3">
-                            {{$query->created_at}}
-                        </div>
+
                     </div>
 
                 </div><!-- /.col -->
@@ -100,7 +94,6 @@
                             <th>CLIMATISEUR MARQUE</th>
                             <th>LIEUX</th>
                             <th>DATE D'INSTALLATION</th>
-                            <th>DATE DE CRÉATION</th>
                             <th>HISTORIQUE D'ENTRETIEN</th>
                         </tr>
                         </thead>
@@ -110,7 +103,6 @@
                                 <td>{{$ac->mark}}</td>
                                 <td>{{$ac->place}}</td>
                                 <td>{{$ac->installation}}</td>
-                                <td>{{$ac->created_at->format('y-m-d')}}</td>
                                 <td>
                                     <a href="{{route('user.maintain.hostory', ['id' => $ac->id])}}" style="color: white" class="btn btn-sm btn-danger">
                                         <i class="fa fa-eye"></i>

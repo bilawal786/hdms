@@ -37,6 +37,7 @@
                                     <thead>
                                     <tr>
                                         <th>DATE D'ENTRETIEN</th>
+                                        <th>COMMENTAIRES</th>
                                         <th>PROCHAIN ENTRETIEN</th>
                                         <th>COMMENTAIRES</th>
                                     </tr>
@@ -45,8 +46,9 @@
                                     @foreach($main as $row)
                                         <tr>
                                             <td>{{$row->service_date}}</td>
+                                            <td>{{$row->servicecomments}}</td>
                                             <td>{{$row->next_maintain}}</td>
-                                            <td>{{$row->comments}}</td>
+                                            <td>{{$row->nextcomments}}</td>
                                         </tr>
                                     @endforeach
                                     </tbody>
@@ -87,6 +89,12 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
+                                <label for="title"><b>COMMENTAIRES</b></label>
+                                <textarea name="servicecomments" class="form-control" id="" cols="30" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
                                 <label for="title"><b>PROCHAIN ENTRETIEN</b><span class="text-danger">*</span></label>
                                 <input type="date" class="form-control" name="next_maintain" required>
                             </div>
@@ -94,7 +102,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="title"><b>COMMENTAIRES</b></label>
-                                <textarea name="comments" class="form-control" id="" cols="30" rows="5"></textarea>
+                                <textarea name="nextcomments" class="form-control" id="" cols="30" rows="5"></textarea>
                             </div>
                         </div>
 

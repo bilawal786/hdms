@@ -131,7 +131,8 @@ class QueriesController extends Controller
         $maintain->q_id = $request->q_id;
         $maintain->service_date = $request->service_date;
         $maintain->next_maintain = $request->next_maintain;
-        $maintain->comments = $request->comments;
+        $maintain->servicecomments = $request->servicecomments;
+        $maintain->nextcomments = $request->nextcomments;
         $maintain->save();
         $notification = array(
             'messege' => 'Ajouté avec succès!',

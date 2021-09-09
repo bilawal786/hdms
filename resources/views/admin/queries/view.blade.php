@@ -114,14 +114,9 @@
                                @endif
                            </div>
                            <hr>
+
                            <div class="col-md-3">
-                               <b>DATE DE POSE:</b>
-                           </div>
-                           <div class="col-md-3">
-                               {{$query->created_at}}
-                           </div>
-                           <div class="col-md-3">
-                               <b>Description:</b>
+                               <b>Message:</b>
                            </div>
                            <div class="col-md-3">
                                {{$query->message}}
@@ -140,68 +135,7 @@
                                @endif
                            </div>
                        </div>
-<!--                        <hr>
-                        <form action="{{route('query.update', ['id' => $query->id])}}" method="POST">
-                            @csrf
-                        <div class="row">
-                            @if(Auth::user()->role ==1)
-                                <div class="col-md-3">
-                                    <b>DATE D'ENTRETIEN:</b>
-                                </div>
-                                <div class="col-md-3">
-                                    <input type="date" value="{{$query->service_date}}" name="service_date" class="form-control">
-                                </div>
-                                <div class="col-md-3">
-                                    <b>CLIMATISEUR Marque:</b>
-                                </div>
-                                <div class="col-md-3">
-                                    <input type="text" value="{{$query->mark}}" name="mark" class="form-control">
-                                </div>
-                                <hr>
-                                <div class="col-md-3">
-                                    <b>LIEUX:</b>
-                                </div>
-                                <div class="col-md-3">
-                                    <input type="text"  value="{{$query->place}}" name="place" class="form-control">
-                                </div>
-                                <div class="col-md-3">
-                                    <b>PROCHAIN ENTRETIEN:</b>
-                                </div>
-                                <div class="col-md-3">
-                                    <input type="date" value="{{$query->next_maintain}}" name="next_maintain" class="form-control">
-                                </div>
-                                <div class="col-md-3 col-md-offset-3">
-                                    <button type="submit" class="btn btn-primary btn-sm">Sauvegarder</button>
-                                </div>
-                            @else
-
-                            @endif
-                        </div>
-                        </form>
-                        <hr>
-                        <form action="{{route('query.update1', ['id' => $query->id])}}" method="POST">
-                            @csrf
-                        <div class="row">
-                            <div class="col-md-3">
-                                <b>Combien de clients de climatiseur ont-ils ?:</b>
-                            </div>
-                            <div class="col-md-3">
-                                <input type="number" name="quantity" value="{{count(json_decode($query->installed, true))}}"  class="form-control ac">
-                            </div>
-                            <div class="col-md-6">
-                                @foreach(json_decode($query->installed, true) as $ins)
-                                    <input type="text" name="installed[]" value="{{$ins}}" class="form-control">
-                                @endforeach
-                                <div class="values">
-
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <button type="submit" class="btn btn-primary btn-sm">Sauvegarder</button>
-                            </div>
-                        </div>
-                        </form>-->
-                        <hr>
+           <hr>
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">Climatiseurs</h3>
@@ -215,7 +149,6 @@
                                     <th>CLIMATISEUR MARQUE</th>
                                     <th>LIEUX</th>
                                     <th>DATE D'INSTALLATION</th>
-                                    <th>DATE DE CRÉATION</th>
                                     <th>HISTORIQUE D'ENTRETIEN</th>
                                 </tr>
                             </thead>
@@ -225,7 +158,6 @@
                                     <td>{{$ac->mark}}</td>
                                     <td>{{$ac->place}}</td>
                                     <td>{{$ac->installation}}</td>
-                                    <td>{{$ac->created_at->format('y-m-d')}}</td>
                                     <td>
                                         <a href="{{route('maintain.hostory', ['id' => $ac->id])}}" style="color: white" class="btn btn-sm btn-danger">
                                             <i class="fa fa-eye"></i>
