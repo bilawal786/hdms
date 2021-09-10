@@ -51,6 +51,8 @@ Route::get('admin/sponsership', 'Admin\CustomerController@sponsership')->name('a
 Route::post('maintain/store', 'Admin\QueriesController@maintainstore')->name('maintain.store');
 Route::post('ac/store', 'Admin\QueriesController@acstore')->name('ac.store');
 Route::get('maintain/hostory/{id}', 'Admin\QueriesController@history')->name('maintain.hostory');
+Route::get('history/edit/{id}', 'Admin\QueriesController@historyedit')->name('history.edit');
+Route::post('history/update/{id}', 'Admin\QueriesController@historyupdate')->name('history.update');
 
 
 Route::get('/update-Password', [

@@ -40,6 +40,7 @@
                                         <th>COMMENTAIRES</th>
                                         <th>PROCHAIN ENTRETIEN</th>
                                         <th>COMMENTAIRES</th>
+                                        <th>Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -49,6 +50,11 @@
                                             <td>{{$row->servicecomments}}</td>
                                             <td>{{$row->next_maintain}}</td>
                                             <td>{{$row->nextcomments}}</td>
+                                            <td>
+                                                <a href="{{route('history.edit' , ['id'=>$row->id])}}" class="btn btn-sm btn-success" data-toggle="tooltip" title="edit">
+                                                    <i class="fa fa-pen"></i>
+                                                </a>
+                                            </td>
                                         </tr>
                                     @endforeach
                                     </tbody>

@@ -140,5 +140,20 @@ class QueriesController extends Controller
         );
         return redirect()->back()->with($notification);
     }
+    public function historyedit($id){
+        $history = Maintain::find($id);
+        return view('admin.queries.historyedit', compact('history'));
+    }
+    public function historyupdate(Request $request, $id){
+        $history = Maintain::find($id);
+        $history->servicecomments = $request->servicecomments;
+        $history->nextcomments = $request->nextcomments;
+        $history->update();
+        $notification = array(
+            'messege' => 'Ajouté avec succès!',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
 
 }
