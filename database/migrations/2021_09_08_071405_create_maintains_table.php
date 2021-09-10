@@ -21,6 +21,7 @@ class CreateMaintainsTable extends Migration
             $table->longText('next_maintain')->nullable();
             $table->longText('servicecomments')->nullable();
             $table->longText('nextcomments')->nullable();
+            $table->string('status')->default('0');
             $table->timestamps();
         });
     }

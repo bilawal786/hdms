@@ -40,6 +40,7 @@
                                         <th>COMMENTAIRES</th>
                                         <th>PROCHAIN ENTRETIEN</th>
                                         <th>COMMENTAIRES</th>
+                                        <th>Client Status</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
@@ -50,6 +51,15 @@
                                             <td>{{$row->servicecomments}}</td>
                                             <td>{{$row->next_maintain}}</td>
                                             <td>{{$row->nextcomments}}</td>
+                                            <td>
+                                                @if($row->status == 1)
+                                                    <span class="badge badge-success">J'accepte</span>
+                                                @elseif($row->status == 2)
+                                                    <span class="badge badge-danger">Rejeter</span>
+                                                @else
+                                                    <span class="badge badge-warning">Aucune action du client</span>
+                                                @endif
+                                            </td>
                                             <td>
                                                 <a href="{{route('history.edit' , ['id'=>$row->id])}}" class="btn btn-sm btn-success" data-toggle="tooltip" title="edit">
                                                     <i class="fa fa-pen"></i>

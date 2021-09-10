@@ -29,8 +29,8 @@ class UserController extends Controller
         return view('front.user.queryView', compact('query'));
     }
     public function queryStatus($id, $status){
-        $query = Query::find($id);
-        $query->customerstatus = $status;
+        $query = Maintain::find($id);
+        $query->status = $status;
         $query->update();
         $notification = array(
             'messege' => 'Mise à jour du statut!',

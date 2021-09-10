@@ -123,16 +123,16 @@
                            </div>
                            <hr>
                            <div class="col-md-3">
-                               <b>Statut du client:</b>
+{{--                               <b>Statut du client:</b>--}}
                            </div>
                            <div class="col-md-3">
-                               @if($query->customerstatus == 1)
+<!--                               @if($query->customerstatus == 1)
                                    <span class="badge badge-success">J'accepte</span>
                                @elseif($query->customerstatus == 2)
                                    <span class="badge badge-danger">Rejeter</span>
                                @else
                                    <span class="badge badge-warning">Aucune action du client</span>
-                               @endif
+                               @endif-->
                            </div>
                        </div>
            <hr>

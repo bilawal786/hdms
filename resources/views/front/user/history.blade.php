@@ -48,12 +48,27 @@
                                     <div class="col-xs-6 col-md-6">
                                         <b>COMMENTAIRES</b>
                                     </div>
-                                    <hr>
+                                    <br>
                                     <div class="col-xs-6 col-md-6">
                                         {{$row->next_maintain}}
                                     </div>
                                     <div class="col-xs-6 col-md-6">
                                         {{$row->nextcomments}}
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div class="col-xs-6 col-md-6">
+                                        <b>Valider</b>
+                                    </div>
+                                    <div class="col-xs-6 col-md-6">
+                                        @if($row->status == 0)
+                                            <a href="{{route('customer.query.status', ['id' => $row->id, 'status' => '1'])}}"><button class="btn btn-primary btn-sm">J'accepte</button></a>
+                                            <a href="{{route('customer.query.status', ['id' => $row->id, 'status' => '2'])}}"><button class="btn btn-primary btn-sm">Rejeter</button></a>
+                                        @elseif($row->status == 1)
+                                            <b>J'accepte</b>
+                                        @else
+                                            <b>Rejeter</b>
+                                        @endif
                                     </div>
                                 </div>
                                 <br>
