@@ -43,6 +43,7 @@
                                         <th>Taper</th>
                                         <th>Prix</th>
                                         <th>Statut</th>
+                                        <th>Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -69,6 +70,11 @@
                                                 @else
                                                     <span class="badge badge-success">Payée</span>
                                                 @endif
+                                            </td>
+                                            <td>
+                                                <a href="{{route('payment.delete' , ['id'=>$row->id])}}" id="delete" class="btn btn-sm btn-danger" data-toggle="tooltip" title="edit">
+                                                    <i class="fa fa-times"></i>
+                                                </a>
                                             </td>
                                         </tr>
                                     @endforeach

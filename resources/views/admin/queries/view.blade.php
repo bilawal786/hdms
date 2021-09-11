@@ -150,6 +150,7 @@
                                     <th>LIEUX</th>
                                     <th>DATE D'INSTALLATION</th>
                                     <th>HISTORIQUE D'ENTRETIEN</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -159,8 +160,13 @@
                                     <td>{{$ac->place}}</td>
                                     <td>{{$ac->installation}}</td>
                                     <td>
-                                        <a href="{{route('maintain.hostory', ['id' => $ac->id])}}" style="color: white" class="btn btn-sm btn-danger">
+                                        <a href="{{route('maintain.hostory', ['id' => $ac->id])}}" style="color: white" class="btn btn-sm btn-success">
                                             <i class="fa fa-eye"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a style="color:white;" href="{{route('ac.delete' , ['id'=>$ac->id])}}" id="delete" class="btn btn-sm btn-danger" data-toggle="tooltip" title="edit">
+                                            <i class="fa fa-times"></i>
                                         </a>
                                     </td>
                                 </tr>
@@ -273,7 +279,7 @@
 
                     <div class="col-md-12 pull-right">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block">Créer un compte</button>
+                            <button type="submit" class="btn btn-primary btn-block">Envoyer le lien de paiement</button>
                         </div>
                     </div>
                 </form>

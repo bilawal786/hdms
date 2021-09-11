@@ -83,7 +83,7 @@
         <!-- /.content -->
     </div>
     <div class="modal fade" id="ac" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div style="max-width: 800px !important;" class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">AJOUTER L'ENTRETIEN</h5>
@@ -95,7 +95,8 @@
                 <div class="modal-body">
                     <form action="{{route('maintain.store')}}" method="post" enctype="multipart/form-data" data-parsley-validate>
                         @csrf
-                        <div class="col-md-12">
+                        <div class="row">
+                        <div class="col-md-4">
                             <div class="form-group">
                                 <label for="title"><b>DATE D'ENTRETIEN</b><span class="text-danger">*</span></label>
                                 <input type="date"  class="form-control" name="service_date" required>
@@ -103,25 +104,26 @@
                                 <input type="hidden" value="{{$ac->q_id}}" name="q_id" required>
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-8">
                             <div class="form-group">
                                 <label for="title"><b>COMMENTAIRES</b></label>
                                 <textarea name="servicecomments" class="form-control" id="" cols="30" rows="5"></textarea>
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-4">
                             <div class="form-group">
                                 <label for="title"><b>PROCHAIN ENTRETIEN</b><span class="text-danger">*</span></label>
                                 <input type="date" class="form-control" name="next_maintain" required>
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-8">
                             <div class="form-group">
                                 <label for="title"><b>COMMENTAIRES</b></label>
                                 <textarea name="nextcomments" class="form-control" id="" cols="30" rows="5"></textarea>
                             </div>
                         </div>
 
+                        </div>
 
                         <div class="col-md-12 pull-right">
                             <div class="form-group">

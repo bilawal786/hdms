@@ -155,5 +155,14 @@ class QueriesController extends Controller
         );
         return redirect()->back()->with($notification);
     }
+    public function acdelete($id){
+        $ac = Ac::find($id);
+        $ac->delete();
+        $notification = array(
+            'messege' => 'Ajouté avec succès!',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
 
 }

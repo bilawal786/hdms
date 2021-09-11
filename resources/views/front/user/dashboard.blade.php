@@ -47,7 +47,9 @@
                     <table class="table table-bordered">
                         <thead>
                         <tr>
-                            <th>DATE DE POSE</th>
+                            <th>Nom</th>
+                            <th>Email</th>
+                            <th>Service</th>
                             <th>Statut</th>
                             <th>Action</th>
                         </tr>
@@ -55,7 +57,9 @@
                         <tbody>
                         @foreach($queries as $row)
                             <tr>
-                                <td>{{$row->created_at->format('m/d/y')}}</td>
+                                <td>{{$row->name}}</td>
+                                <td>{{$row->email}}</td>
+                                <td>{{$row->service}}</td>
                                 <td>
                                     @if($row->status == 0)
                                         <span class="badge badge-primary">Nouvelle</span>

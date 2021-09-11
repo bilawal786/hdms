@@ -38,4 +38,13 @@ class CustomerController extends Controller
         $sponsership = Sponser::orderby('created_at', 'DESC')->get();
         return view('admin.customers.sponsership', compact('sponsership'));
     }
+    public function paymentdelete($id){
+        $payment = Payment::find($id);
+        $payment->delete();
+        $notification = array(
+            'messege' => 'Supreme!',
+            'alert-type' => 'error'
+        );
+        return redirect()->back()->with($notification);
+    }
 }
