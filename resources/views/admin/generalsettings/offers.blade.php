@@ -23,9 +23,10 @@
             <div class="container-fluid">
                 <!-- SELECT2 EXAMPLE -->
                 <div class="card card-default">
+                    <form action="{{route('offers.store')}}" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+                        @csrf
                     <div class="card-header">
-                        <h3 class="card-title">Nos services</h3>
-
+                        <input type="checkbox" {{$offers->is_on == 1 ? 'checked' : ''}} value="1" class="form-control" name="is_on" data-bootstrap-switch>
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                 <i class="fas fa-minus"></i>
@@ -35,8 +36,7 @@
                             </button>
                         </div>
                     </div>
-                    <form action="{{route('offers.store')}}" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
-                    @csrf
+
                     <!-- /.card-header -->
                         <div class="card-body">
                             <div class="row">

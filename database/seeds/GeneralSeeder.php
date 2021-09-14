@@ -88,19 +88,19 @@ Nos prestations globales pour tous les systèmes de génie climatique nous perme
             'title1' => 'Offer 1',
             'image1' => 'offers/1631031653offers.jpg',
             'price1' => '599',
-            'valid1' => '2021-09-09',
+            'valid1' => '2021-09-20',
             'title2' => 'Offer 2',
             'image2' => 'offers/1631031983offers.jpg',
             'price2' => '599',
-            'valid2' => '2021-09-09',
+            'valid2' => '2021-09-20',
             'title3' => 'Offer 3',
             'image3' => 'offers/1631032017offers.jpg',
             'price3' => '599',
-            'valid3' => '2021-09-09',
+            'valid3' => '2021-09-20',
             'title4' => 'Offer 2',
             'image4' => 'offers/1631032050offers.jpg',
             'price4' => '599',
-            'valid4' => '2021-09-09',
+            'valid4' => '2021-09-20',
         ]);
     }
 }

@@ -172,6 +172,13 @@ class GeneralSettingsController extends Controller
     }
     public function offersstore(Request $request){
         $offers = Offers::find(1);
+        if ($request->is_on){
+            $offers->is_on = $request->is_on;
+        }else{
+            $offers->is_on = 0;
+        }
+
+
         $offers->title1 = $request->title1;
         $offers->title2 = $request->title2;
         $offers->title3 = $request->title3;

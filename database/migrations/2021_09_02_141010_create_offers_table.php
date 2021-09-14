@@ -15,6 +15,7 @@ class CreateOffersTable extends Migration
     {
         Schema::create('offers', function (Blueprint $table) {
             $table->id();
+            $table->integer('is_on')->default('1');
             $table->string('title1');
             $table->string('image1');
             $table->string('price1');
