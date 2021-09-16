@@ -12,7 +12,7 @@
     <!--IE Compatibility Meta-->
     <meta name="author" content="wplly" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="construction html5 template">
+    <meta name="description" content="HDMS CLIM">
     <link href="{{asset('front/assets/images/logo/hdms.png')}}" rel="icon">
 @include('include.css')
 <!-- Fonts
