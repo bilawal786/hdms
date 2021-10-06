@@ -29,6 +29,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">Tous les clients</h3>
+                                <button class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#exampleModal">Créer un client</button>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -73,5 +74,59 @@
         </section>
         <!-- /.content -->
     </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Créer un compte</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form action="{{route('customer.store')}}" method="post" enctype="multipart/form-data" data-parsley-validate>
+                        @csrf
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="title"><b>Nom</b><span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="title"><b>Email</b><span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="email" required>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="title"><b>Telephone</b><span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="title"><b>Mot de passe</b><span class="text-danger">*</span></label>
+                                <input type="text" value="12345678" class="form-control" name="password" required>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12 pull-right">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block">Créer un compte</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div></div>
 
 @endsection

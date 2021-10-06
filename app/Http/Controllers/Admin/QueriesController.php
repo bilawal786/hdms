@@ -52,9 +52,12 @@ class QueriesController extends Controller
         $customer->password = Hash::make($request->password);
         $customer->save();
 
-        $query = Query::find($request->q_id);
-        $query->user_id = $customer->id;
-        $query->update();
+        if ($request->q_id){
+            $query = Query::find($request->q_id);
+            $query->user_id = $customer->id;
+            $query->update();
+        }
+
 
         $notification = array(
             'messege' => 'Ajouté avec succès!',
