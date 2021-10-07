@@ -32,6 +32,10 @@ class FrontendController extends Controller
         $query->service = $request->service;
         $query->message = $request->message;
         $query->price = $request->price;
+        if ($request->customer_id) {
+            // code...
+            $query->user_id = $request->customer_id;
+        }
         if($request->installed){
             foreach($request->installed as $size)
             {

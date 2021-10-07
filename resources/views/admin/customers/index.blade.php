@@ -56,6 +56,9 @@
                                                 <a href="{{route('customer.edit' , ['id'=>$row->id])}}" class="btn btn-sm btn-success" data-toggle="tooltip" title="edit">
                                                     <i class="fa fa-pen"></i>
                                                 </a>
+                                                 <a href="{{route('customer.delete' , ['id'=>$row->id])}}" class="btn btn-sm btn-danger" data-toggle="tooltip" id="delete" title="edit">
+                                                    <i class="fa fa-times"></i>
+                                                </a>
                                             </td>
                                         </tr>
                                     @endforeach

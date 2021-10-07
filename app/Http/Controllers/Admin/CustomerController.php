@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Payment;
 use App\Sponser;
 use App\User;
+use App\Query;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -17,6 +18,15 @@ class CustomerController extends Controller
     public function edit($id){
         $customer = User::find($id);
         return view('admin.customers.edit', compact('customer'));
+    }
+
+    public function delete($id){
+         $queries = Query::where('user_id', $id)->get();
+         $queries->each->delete();
+        $customer = User::find($id);
+        $customer->delete();
+
+        return redirect()->back();
     }
     public function update(Request $request, $id){
         $customer = User::find($id);

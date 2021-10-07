@@ -29,6 +29,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">Nouvelles requêtes</h3>
+                                  <a href="{{route('query.create')}}"><button class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#exampleModal">Ajouter une demande</button></a>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -53,6 +54,7 @@
                                                 <a href="{{route('queries.view' , ['id'=>$row->id])}}" class="btn btn-sm btn-success" data-toggle="tooltip" title="edit">
                                                     <i class="fa fa-eye"></i>
                                                 </a>
+                                    
                                             </td>
                                         </tr>
                                     @endforeach

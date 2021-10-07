@@ -44,6 +44,7 @@ Route::post('/customer/store', 'Admin\QueriesController@customerStore')->name('c
 Route::get('customers/index', 'Admin\CustomerController@index')->name('customers.index');
 Route::get('customers/orders/{id}', 'Admin\CustomerController@orders')->name('customer.orders');
 Route::get('customers/edit/{id}', 'Admin\CustomerController@edit')->name('customer.edit');
+Route::get('customers/delete/{id}', 'Admin\CustomerController@delete')->name('customer.delete');
 Route::post('customers/update/{id}', 'Admin\CustomerController@update')->name('customer.update');
 Route::get('customers/payments', 'Admin\CustomerController@payments')->name('customers.payments');
 Route::get('customers/payments/delete/{id}', 'Admin\CustomerController@paymentdelete')->name('payment.delete');
@@ -56,6 +57,8 @@ Route::get('maintain/hostory/{id}', 'Admin\QueriesController@history')->name('ma
 Route::get('history/edit/{id}', 'Admin\QueriesController@historyedit')->name('history.edit');
 Route::post('history/update/{id}', 'Admin\QueriesController@historyupdate')->name('history.update');
 
+Route::get('query/create', 'Admin\QueriesController@create')->name('query.create');
+Route::post('query/store', 'Admin\QueriesController@store')->name('admin.query.store');
 
 Route::get('/update-Password', [
     'uses' => 'Admin\GeneralSettingsController@password_change',

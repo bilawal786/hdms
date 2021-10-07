@@ -167,5 +167,36 @@ class QueriesController extends Controller
         );
         return redirect()->back()->with($notification);
     }
+    public function create(){
+        $users = User::where('role', '2')->get();
+        return view('admin.queries.create', compact('users'));
+    }
+    public function store(Request $request){
+        $query = new Query();
+
+            // code...
+        $customer = User::where('id', $request->customer_id)->first();
+        $query->user_id = $request->customer_id;
+        $query->name = $customer->name;
+        $query->email = $customer->email;
+        $query->phone = $customer->phone;
+        $query->service = $request->service;
+        $query->message = $request->message;
+        $query->price = $request->price;
+        
+        if($request->installed){
+            foreach($request->installed as $size)
+            {
+                $data[] = $size;
+                $query->installed = json_encode($data);
+            }
+        }
+        $query->save();
+        $notification = array(
+            'messege' => 'Votre requête est soumise avec succès!',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
 
 }
